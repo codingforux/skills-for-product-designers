@@ -27,15 +27,3 @@ How the design skills find this product's design files and Figma files.
 - **`briefs/`**: briefs, PRD snapshots, questions and tickets, when the issue tracker is local markdown.
 
 If any of these files don't exist, **proceed silently**. Don't flag their absence.
-
-<!-- Master-plus-products only. Delete this section for a single product. -->
-## Shared
-
-- **Shared standards and glossary**: `<path to the master's design folder>`. Read its `FIGMA_STANDARDS.md` and `glossary.md` first, then this folder's, which hold only this product's additions. Where they disagree, the shared rules win: follow them and flag the product's file to the owner.
-
-<!-- In the master's own config only: one row per product. Add a row when a product is first worked on. -->
-## Products
-
-| Product | Design folder | Figma folder or file | Account | Design system docs |
-| ------- | ------------- | -------------------- | ------- | --------- |
-| <name>  | `<path>`      | `<id or key>`        | <name>  | `<path>`  |
