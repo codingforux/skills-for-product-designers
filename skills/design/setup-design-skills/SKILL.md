@@ -38,13 +38,12 @@ Look at the starting state. Read whatever exists; don't assume:
 - Existing Figma rules, a glossary, personas or research docs anywhere in the repo or folder: candidates to import.
 - Existing design-system notes (a design system docs folder, a brand or product registry, Figma file keys): their facts become config.
 - Figma URLs in the repo's docs or README: candidate libraries, project folders and product files.
-- Master-plus-products signals: a token library repo or folder whose rules several products share, or a second product's design folder already set up. Their absence means a single product, which is almost every setup.
 
 ### 3. Present findings and ask
 
 Summarise what's present and what's missing. Then take the sections in order. One section, one answer, then the next.
 
-Lead each section with the recommended answer so the user can accept it in a word. Give a one-line explainer only when the choice genuinely branches; skip the section entirely when exploration already settled it (Section G when there are no master-plus-products signals).
+Lead each section with the recommended answer so the user can accept it in a word. Give a one-line explainer only when the choice genuinely branches; skip the section entirely when exploration already settled it.
 
 **Section A: Design folder.**
 
@@ -104,12 +103,6 @@ Either way, ask for the default breakpoints, which most products keep the same f
 
 If exploration found personas or research, propose **import** into the template's shape. Otherwise propose an **interview**: ask who uses the product, then draft each persona from the answers one at a time, asking about any field you can't fill. Leave a field as "Unknown" rather than invent it.
 
-**Section G: Master and products.** Skip this section unless exploration found the signals. It is rare.
-
-> Explainer: A master library shared by several products keeps its standards and glossary once, beside the master library. Each product's design folder holds only its additions.
-
-Confirm where the shared standards and glossary live and record that path in each product's config. In the master's own config, list the products in a products table (product, design folder, Figma folder or file, account, design system docs). Where a product's addition contradicts the shared rules, the shared rules win.
-
 ### 4. Confirm and edit
 
 Show the user a draft of:
@@ -137,24 +130,24 @@ The block (paths relative to the design folder chosen in Section A):
 ```markdown
 ## Agent skills
 
+### Design config
+
+[one-line summary: product, libraries, where design files go]. Read `docs/design/config.md` before running any design skill or touching Figma.
+
 ### Issue tracker
 
-[one-line summary of where briefs and tickets are tracked]. See `docs/design/issue-tracker.md`.
+[one-line summary of where briefs and tickets are tracked]. Read `docs/design/issue-tracker.md` before reading or writing a brief, question or ticket.
 
 ### Labels
 
-[one-line summary of the label vocabulary]. See `docs/design/labels.md`.
-
-### Design config
-
-[one-line summary: product, libraries, where design files go]. See `docs/design/config.md`.
+[one-line summary of the label vocabulary]. Read `docs/design/labels.md` before applying a label.
 ```
 
 Include the `### Labels` sub-block, and write `labels.md`, only when Section C ran. The block points at the config only: never at the standards, glossary or personas, which the skills open themselves when they need them.
 
 Then write the design folder files using the seed templates in this skill folder as a starting point:
 
-- [config.md](./config.md): Figma files, paths, and the products table for a master
+- [config.md](./config.md): Figma files and paths
 - [issue-tracker-github.md](./issue-tracker-github.md): GitHub issue tracker
 - [issue-tracker-gitlab.md](./issue-tracker-gitlab.md): GitLab issue tracker
 - [issue-tracker-local.md](./issue-tracker-local.md): local-markdown issue tracker
@@ -165,7 +158,7 @@ Then write the design folder files using the seed templates in this skill folder
 - [FIGMA_MCP_FINDINGS.md](./FIGMA_MCP_FINDINGS.md): starter Figma MCP findings, empty until agent-retro adds to it
 - [persona.md](./persona.md): one persona, plus the `personas/index.md` format
 
-For "other" issue trackers, write `issue-tracker.md` from scratch using the user's description. On GitHub or GitLab, create each label from `labels.md` that the tracker doesn't have yet (`gh label create <name>` / `glab label create <name>`), so the other skills can apply them. In the master-plus-products shape, a product's `FIGMA_STANDARDS.md` and `glossary.md` hold only its additions.
+For "other" issue trackers, write `issue-tracker.md` from scratch using the user's description. On GitHub or GitLab, create each label from `labels.md` that the tracker doesn't have yet (`gh label create <name>` / `glab label create <name>`), so the other skills can apply them.
 
 ### 6. Done
 

@@ -53,20 +53,20 @@ Match each item against the frames:
 
 - The Figma link.
 - The paths to `FIGMA_STANDARDS.md` and the glossary, the library file keys, and where the design system docs are, if any.
-- The brief: "Report, per frame where relevant, every place the frames break a written standard: cite the standard (file + the rule). Check that components come from the library and are used as the design system docs say, values are bound to library tokens, and layers and components follow the naming rules. Distinguish hard violations (breaks a written standard) from judgement calls. Under 400 words."
+- The task: "Report, per frame where relevant, every place the frames break a written standard: cite the standard (file + the rule). Check that components come from the library and are used as the design system docs say, values are bound to library tokens, and layers and components follow the naming rules. Distinguish hard violations (breaks a written standard) from judgement calls. Under 400 words."
 
 **Brief sub-agent prompt** should include:
 
 - The Figma link.
 - The fetched ticket and brief.
-- The brief: "Report: (a) user stories the ticket covers that are missing or partial in the frames; (b) screens or behaviour that weren't asked for (scope creep); (c) stories that look designed but where the design looks wrong for the story. Quote the user story for each finding. A miss against the brief is a hard violation; anything else is a judgement call. Work from the brief alone, without opening persona files. Under 400 words."
+- The task: "Report: (a) user stories the ticket covers that are missing or partial in the frames; (b) screens or behaviour that weren't asked for (scope creep); (c) stories that look designed but where the design looks wrong for the story. Quote the user story for each finding. A miss against the brief is a hard violation; anything else is a judgement call. Work from the brief alone, without opening persona files. Under 400 words."
 
 **Completeness sub-agent prompt** should include:
 
 - The Figma link.
 - The fetched ticket and brief, and the paths to `FIGMA_STANDARDS.md` and the glossary.
 - **The completeness baseline from step 3** pasted in full, with its two rules (the sub-agent has no other access to it).
-- The brief: "Report each baseline item that is missing or thin, per frame where relevant. Mark each finding hard violation or judgement call by the baseline's rules. Under 400 words."
+- The task: "Report each baseline item that is missing or thin, per frame where relevant. Mark each finding hard violation or judgement call by the baseline's rules. Under 400 words."
 
 If the brief is missing, skip the Brief sub-agent and note this in the final report.
 

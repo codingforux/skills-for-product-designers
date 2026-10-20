@@ -4,6 +4,7 @@
     "name": "Ryan",
     "url": "https://github.com/codingforux"
   },
+  "description": "Agent skills for product designers: from a PM's PRD to reviewed designs in Figma.",
   "plugins": [
     {
       "name": "skills-for-product-designers",
