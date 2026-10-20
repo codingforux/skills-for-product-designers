@@ -1,11 +1,11 @@
 ---
-name: improve-repo
+name: update-skills-repo
 description: Ship a change to this repo's published skills package. Use when adding, editing, renaming or removing a skill, or changing the README, manifests or changelog.
 metadata:
   internal: true
 ---
 
-# Improve repo
+# Update skills repo
 
 Every change ships as a **release**: one branch, one PR into `main`, one version bump. Claude Code only updates installs when `plugin.json`'s `version` changes, so an unbumped change never reaches anyone.
 
