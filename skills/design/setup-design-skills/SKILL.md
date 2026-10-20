@@ -130,17 +130,17 @@ The block (paths relative to the design folder chosen in Section A):
 ```markdown
 ## Agent skills
 
+### Design config
+
+[one-line summary: product, libraries, where design files go]. Read `docs/design/config.md` before running any design skill or touching Figma.
+
 ### Issue tracker
 
-[one-line summary of where briefs and tickets are tracked]. See `docs/design/issue-tracker.md`.
+[one-line summary of where briefs and tickets are tracked]. Read `docs/design/issue-tracker.md` before reading or writing a brief, question or ticket.
 
 ### Labels
 
-[one-line summary of the label vocabulary]. See `docs/design/labels.md`.
-
-### Design config
-
-[one-line summary: product, libraries, where design files go]. See `docs/design/config.md`.
+[one-line summary of the label vocabulary]. Read `docs/design/labels.md` before applying a label.
 ```
 
 Include the `### Labels` sub-block, and write `labels.md`, only when Section C ran. The block points at the config only: never at the standards, glossary or personas, which the skills open themselves when they need them.
