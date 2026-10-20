@@ -1,0 +1,5 @@
+interface:
+  display_name: "To Design Brief"
+  short_description: "Turn a conversation into a design brief"
+policy:
+  allow_implicit_invocation: false

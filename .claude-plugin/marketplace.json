@@ -1,0 +1,15 @@
+{
+  "name": "skills-for-product-designers",
+  "owner": {
+    "name": "Ryan",
+    "url": "https://github.com/codingforux"
+  },
+  "plugins": [
+    {
+      "name": "skills-for-product-designers",
+      "source": "./",
+      "description": "Agent skills for product designers, adapted from Matt Pocock's skills: from a PM's PRD to reviewed designs in Figma.",
+      "category": "design"
+    }
+  ]
+}

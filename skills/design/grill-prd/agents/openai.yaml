@@ -1,0 +1,5 @@
+interface:
+  display_name: "Grill the PRD"
+  short_description: "Grill a PRD and park your team's questions"
+policy:
+  allow_implicit_invocation: false

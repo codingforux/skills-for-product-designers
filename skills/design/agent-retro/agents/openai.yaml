@@ -1,0 +1,5 @@
+interface:
+  display_name: "Agent Retro"
+  short_description: "Improve the design setup after a session"
+policy:
+  allow_implicit_invocation: false

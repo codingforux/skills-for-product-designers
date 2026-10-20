@@ -1,0 +1,5 @@
+interface:
+  display_name: "Implement Design Brief"
+  short_description: "Design a brief in Figma with parallel subagents"
+policy:
+  allow_implicit_invocation: false
