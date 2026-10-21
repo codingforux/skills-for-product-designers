@@ -1,5 +1,10 @@
 # skills-for-product-designers
 
+## 0.5.0
+
+- figma-writes now saves a named version to the Figma file's version history (for example "Before <brief>") before the first write to any file that already has content, so you can restore the whole file in one click. If the agent can't save it, it asks you to save one in Figma first. implement-ux-brief saves one version per run, named after the brief, and its UX agents save none of their own, so a run leaves one backup rather than one per ticket.
+- The sync folder is gone: restore points were its only use. You can delete the `Sync folder` line from your config.
+
 ## 0.4.0
 
 So the skills sit cleanly beside engineering plugins like Matt Pocock's, where "design" can mean system design, names now say **UX**:
