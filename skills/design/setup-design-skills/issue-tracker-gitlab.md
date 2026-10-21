@@ -28,5 +28,5 @@ The **brief** is a parent issue; its parked questions and its tickets are **chil
 - **Brief**: an issue labelled `design-brief`. `glab issue create --label design-brief`. (On GitLab tiers with native epics, an epic may hold the brief instead; a labelled issue works everywhere.)
 - **Child issue**: an issue carrying `Part of #<brief>` at the top of its description, also added to a task list in the brief's description.
 - **Parked question**: a child labelled `needs-alignment`, titled as the question. When your team answers, post the answer as a note, then close it. Open means waiting on the PM; closed means settled, and the last note is the answer.
-- **Ticket**: a child labelled `ready-for-agent` (or `ready-for-human`); `ready-for-review` once designed and waiting for the user, created blockers first.
+- **Ticket**: a child labelled `ready-for-design-agent` (or `ready-for-human`); `ready-for-designer-review` once designed and waiting for the user, created blockers first.
 - **Blocking**: GitLab's **native blocking link**, added with the `/blocked_by #<n>` quick action posted as a note (`glab issue note <child> --message "/blocked_by #<blocker>"`). Native blocking links are a Premium/Ultimate feature; on the free tier fall back to a `Blocked by: #<n>, #<n>` line at the top of the description. A ticket is unblocked when every blocker is closed.

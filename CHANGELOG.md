@@ -1,5 +1,10 @@
 # skills-for-product-designers
 
+## 0.3.0
+
+- Two label defaults are renamed so they don't clash with Matt Pocock's skills in the same repo: `ready-for-agent` is now `ready-for-design-agent`, and `ready-for-review` is now `ready-for-designer-review`. To switch an existing setup, rename the labels in your tracker and in `docs/design/labels.md`, or re-run `/setup-design-skills`.
+- The subagents that design tickets are now called design agents throughout. "Designer" means a person.
+
 ## 0.2.0
 
 - The `## Agent skills` block that setup-design-skills writes now says when to read each file (the config before any design skill or Figma job, the tracker before touching a brief or ticket, the labels before applying one), so agents load the config more reliably. Re-run `/setup-design-skills` to update an existing block.

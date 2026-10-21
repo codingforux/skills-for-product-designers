@@ -22,5 +22,5 @@ Read the file at the referenced path. The user will normally pass the path or th
 ## Brief operations
 
 - **Parked question**: `Status: needs-alignment`, the question as the title. When your team answers, append it under an `## Answer` heading and set `Status: closed`. Open means waiting on the PM; closed means settled.
-- **Ticket**: `Status: ready-for-agent` (or `ready-for-human`); `ready-for-review` once designed and waiting for the user.
+- **Ticket**: `Status: ready-for-design-agent` (or `ready-for-human`); `ready-for-designer-review` once designed and waiting for the user.
 - **Blocking**: a `Blocked by: NN, NN` line near the top. A ticket is unblocked when every ticket it lists is `closed`.
