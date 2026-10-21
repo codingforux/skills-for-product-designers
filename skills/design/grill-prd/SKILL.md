@@ -4,13 +4,13 @@ description: A relentless interview about a PM's PRD, sorting what's yours to de
 disable-model-invocation: true
 ---
 
-The design folder config (issue tracker, paths) should have been provided to you. If not, tell the user to run `/setup-design-skills`.
+The UX folder config (issue tracker, paths) should have been provided to you. If not, tell the user to run `/setup-codingforux-skills`.
 
 ## Before the first round
 
 1. **Get the PRD.** The user passes it as pasted text, a file, a doc link or a tracker issue. Fetch a link with whatever tool reaches it; when none does, ask the user to paste the PRD. Done when you hold the full PRD text.
-2. **Find the brief.** Look in the tracker for an open issue labelled `design-brief` for this PRD. If one exists and a PRD snapshot sits next to it, this is a **re-grill**: see Re-grilling below. If none exists, create it: title from the PRD, body only the PRD source link for now (`to-design-brief` writes the rest).
-3. **Open the affected personas.** Read `personas/index.md` in the design folder and open only the personas this PRD touches. Read the glossary.
+2. **Find the brief.** Look in the tracker for an open issue labelled `ux-brief` for this PRD. If one exists and a PRD snapshot sits next to it, this is a **re-grill**: see Re-grilling below. If none exists, create it: title from the PRD, body only the PRD source link for now (`to-ux-brief` writes the rest).
+3. **Open the affected personas.** Read `personas/index.md` in the UX folder and open only the personas this PRD touches. Read the glossary.
 
 ## Grilling
 
@@ -66,7 +66,7 @@ When the PRD reveals something new about a persona (a need, a context of use, a 
 
 ## Snapshot
 
-Save the PRD next to the brief as `briefs/<brief-slug>-prd.md` in the design folder: the source link, today's date, the full PRD text, then a `## Settled` section listing each item's mark (with the owner, for not-yours items) and every answer reached. Update `## Settled` as answers land, so a later re-grill keeps them.
+Save the PRD next to the brief as `briefs/<brief-slug>-prd.md` in the UX folder: the source link, today's date, the full PRD text, then a `## Settled` section listing each item's mark (with the owner, for not-yours items) and every answer reached. Update `## Settled` as answers land, so a later re-grill keeps them.
 
 ## Re-grilling
 
@@ -74,4 +74,4 @@ When the PRD is a new draft, compare it against the saved snapshot and grill onl
 
 ## Done
 
-The session is done when the frontier holds only parked questions: every branch of the design tree visited, nothing left silently assumed. Then say what is still waiting on your team: "That's as far as we can get until A, B and C are answered." Name each open `needs-alignment` sub-issue and offer to move to `/to-questionnaire`. With nothing parked, offer `/to-design-brief` instead. Do not act on either until the user confirms you have reached a shared understanding.
+The session is done when the frontier holds only parked questions: every branch of the design tree visited, nothing left silently assumed. Then say what is still waiting on your team: "That's as far as we can get until A, B and C are answered." Name each open `needs-alignment` sub-issue and offer to move to `/to-ux-questionnaire`. With nothing parked, offer `/to-ux-brief` instead. Do not act on either until the user confirms you have reached a shared understanding.

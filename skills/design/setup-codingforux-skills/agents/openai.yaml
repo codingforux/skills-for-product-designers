@@ -1,0 +1,5 @@
+interface:
+  display_name: "Setup UX Skills"
+  short_description: "Configure a product for the UX skills"
+policy:
+  allow_implicit_invocation: false

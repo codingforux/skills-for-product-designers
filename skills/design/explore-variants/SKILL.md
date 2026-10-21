@@ -7,7 +7,7 @@ description: Make several radically different variants of a design in Figma to a
 
 A variant set is **throwaway frames that answer one question**: what should this look like? They sit side by side on one page; the user compares them, picks one (or steals bits from each), and the rest are archived.
 
-The design folder config should have been provided to you. If not, tell the user to run `/setup-design-skills`.
+The UX folder config should have been provided to you. If not, tell the user to run `/setup-codingforux-skills`.
 
 ## Process
 
@@ -31,7 +31,7 @@ Draft each variant as its own frame, named `Variant A: <short idea>`. Hold each 
 
 - The frame's job and the user stories it serves.
 - The library's components and tokens, used as the design system docs say. Call the Skill tool with "figma-writes" before your first write.
-- `FIGMA_STANDARDS.md` and the glossary in the design folder.
+- `FIGMA_STANDARDS.md` and the glossary in the UX folder.
 
 Variants must be **structurally different**: different layout, different information hierarchy, different primary action, not just different colours. Three slightly tweaked versions of the same layout aren't variants, they're wallpaper. If two drafts come out too similar, redo one with explicit "do not use <that layout>" guidance.
 

@@ -1,5 +1,0 @@
-interface:
-  display_name: "To Questionnaire"
-  short_description: "Gather your team's open questions into one message"
-policy:
-  allow_implicit_invocation: false
