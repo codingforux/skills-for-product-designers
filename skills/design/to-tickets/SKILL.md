@@ -62,7 +62,7 @@ Iterate until the user approves the breakdown.
 Publish the approved tickets. **How** depends on the tracker `/setup-design-skills` configured; the tickets are the same either way, only the shape of the blocking edges changes:
 
 - **Local markdown** → write one file per ticket under `briefs/<brief-slug>/tickets/<NN>-<slug>.md` in the design folder, numbered from `01` in dependency order (blockers first). Each file's "Blocked by" lists the numbers/titles it depends on. Use the per-ticket file template below: one ticket per file, never a single combined file.
-- **A real issue tracker (GitHub, GitLab, …)** → publish one issue per ticket as a sub-issue of the brief, in dependency order (blockers first) so each ticket's blocking edges can reference real identifiers. Use the platform's native blocking relationship where it has one; otherwise set each ticket's "Blocked by" to the blocking issues. Apply the `ready-for-agent` label, or `ready-for-human` to tickets marked human.
+- **A real issue tracker (GitHub, GitLab, …)** → publish one issue per ticket as a sub-issue of the brief, in dependency order (blockers first) so each ticket's blocking edges can reference real identifiers. Use the platform's native blocking relationship where it has one; otherwise set each ticket's "Blocked by" to the blocking issues. Apply the `ready-for-design-agent` label, or `ready-for-human` to tickets marked human.
 
 Each ticket's checklist is the user stories it covers, copied word for word from the brief with their numbers.
 
@@ -80,7 +80,7 @@ Do NOT close or modify the brief.
 
 **Blocked by:** the numbers/titles of the tickets that gate this one, or "None (can start immediately)".
 
-**Status:** ready-for-agent or ready-for-human
+**Status:** ready-for-design-agent or ready-for-human
 
 - [ ] 3. As a <persona>, I want <thing>, so that <benefit>
 - [ ] 4. As a <persona>, I want <thing>, so that <benefit>

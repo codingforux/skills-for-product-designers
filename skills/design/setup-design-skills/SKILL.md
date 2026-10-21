@@ -10,7 +10,7 @@ Scaffold the per-product configuration that the design skills assume:
 
 - **Design folder**: where the config, standards, glossary and personas live (always `docs/design/`)
 - **Issue tracker**: where briefs, parked questions and tickets live (GitHub by default; local markdown is also supported out of the box)
-- **Labels**: the strings used for the five roles `design-brief`, `needs-alignment`, `ready-for-agent`, `ready-for-human`, `ready-for-review`
+- **Labels**: the strings used for the five roles `design-brief`, `needs-alignment`, `ready-for-design-agent`, `ready-for-human`, `ready-for-designer-review`
 - **Figma files**: the libraries, and where new design files go (a Figma project folder, or one long-lived product file)
 - **Standards, glossary and personas**: the project's Figma rules, its own words, and who uses it
 
@@ -70,9 +70,9 @@ When the design folder isn't inside a clone of the tracker's repo, ask which rep
 >
 > - `design-brief`: a design brief, the parent of its questions and tickets
 > - `needs-alignment`: a question only your team can answer
-> - `ready-for-agent`: a ticket ready for an agent to design
+> - `ready-for-design-agent`: a ticket ready for a design agent
 > - `ready-for-human`: a ticket only a person can design
-> - `ready-for-review`: a designed ticket waiting for your review
+> - `ready-for-designer-review`: a designed ticket waiting for your review
 >
 > Do you want to keep these default labels? (recommended: **yes**)
 

@@ -12,7 +12,7 @@ Most work runs along one main flow, from a PRD in to a handed-off design out:
 2. **`/to-questionnaire`** gathers those parked questions into one message for you to send, then records the answers when they come back.
 3. **`/to-design-brief`** writes the design brief from the conversation and publishes it to your issue tracker.
 4. **`/to-tickets`** splits a bigger brief into thin slices, each one you can design, review and hand off on its own.
-5. **`/implement-design-brief`** designs the brief in Figma from your library, one designer subagent per ticket, then runs **`design-review`** and fixes the hard violations itself. You review what's left, like a pull request.
+5. **`/implement-design-brief`** designs the brief in Figma from your library, one design agent per ticket, then runs **`design-review`** and fixes the hard violations itself. You review what's left, like a pull request.
 6. **`/agent-retro`** suggests fixes to your standards and docs after a session that went wrong, and writes only the ones you approve.
 
 Not sure which skill fits? Run **`/ask-ryan`**.
