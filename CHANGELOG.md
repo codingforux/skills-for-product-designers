@@ -1,5 +1,16 @@
 # skills-for-product-designers
 
+## 0.4.0
+
+So the skills sit cleanly beside engineering plugins like Matt Pocock's, where "design" can mean system design, names now say **UX**:
+
+- Skills: `to-design-brief` → `to-ux-brief`, `implement-design-brief` → `implement-ux-brief`, `design-review` → `ux-review`, `to-tickets` → `to-ux-tickets`, `to-questionnaire` → `to-ux-questionnaire`, `setup-design-skills` → `setup-codingforux-skills`, `ask-ryan` → `ask-codingforux`.
+- Labels: `design-brief` → `ux-brief`, `ready-for-design-agent` → `ready-for-ux-agent`, `ready-for-human` → `ready-for-designer`. The subagents that design tickets are now UX agents.
+- The config folder moves from `docs/design/` to `docs/ux/`.
+- The block setup writes into `CLAUDE.md` / `AGENTS.md` is now `## UX skills`, wrapped in `<!-- codingforux:start -->` / `<!-- codingforux:end -->` markers. Setup finds and updates its own block by those markers and leaves other plugins' blocks alone, so it no longer overwrites another plugin's `## Agent skills` block.
+
+To migrate, run `/setup-codingforux-skills`: it offers to move `docs/design/` to `docs/ux/` and replace the old block. Rename the labels in your tracker to match.
+
 ## 0.3.0
 
 - Two label defaults are renamed so they don't clash with Matt Pocock's skills in the same repo: `ready-for-agent` is now `ready-for-design-agent`, and `ready-for-review` is now `ready-for-designer-review`. To switch an existing setup, rename the labels in your tracker and in `docs/design/labels.md`, or re-run `/setup-design-skills`.

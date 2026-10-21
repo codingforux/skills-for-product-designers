@@ -7,7 +7,7 @@ description: Playbook for writing to Figma through the Figma MCP. Use whenever y
 
 Every Figma write spends a limited **call budget** and can't be undone with git. Follow this playbook on every job.
 
-Read the design folder config (written by setup-design-skills) for the Figma account, the library file keys, where design files go, and the sync folder. Read `FIGMA_MCP_FINDINGS.md` in the design folder too, if it exists: this team's own lessons about the Figma MCP. Which tokens to use is the design system docs' and `FIGMA_STANDARDS.md`'s call, not this skill's.
+Read the UX folder config (written by setup-codingforux-skills) for the Figma account, the library file keys, where design files go, and the sync folder. Read `FIGMA_MCP_FINDINGS.md` in the UX folder too, if it exists: this team's own lessons about the Figma MCP. Which tokens to use is the design system docs' and `FIGMA_STANDARDS.md`'s call, not this skill's.
 
 When you hand the work to another agent, name this skill instead of restating it, and add the account and the file keys.
 

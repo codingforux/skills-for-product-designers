@@ -1,5 +1,0 @@
-interface:
-  display_name: "Ask Ryan"
-  short_description: "Find the right design skill or workflow"
-policy:
-  allow_implicit_invocation: false
