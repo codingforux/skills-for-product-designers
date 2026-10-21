@@ -17,7 +17,6 @@ How the UX skills find this product's design files and Figma files.
 - **Design files go in**: one of
   - a project folder: `<project id>` (<link>). Each brief gets a new file here, named after the brief.
   - a product file: `<file key>` (<link>). Each brief gets its own pages in it.
-- **Sync folder**: `<folder outside git for Figma restore points and reports, e.g. ~/Documents/figma-sync/>`
 
 ## In this folder
 

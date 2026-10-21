@@ -12,13 +12,13 @@ The tickets are not a list of steps. They are a **task graph** with blocking rel
 
 Communication to and from subagents should be sparse. Communicate primarily through **context pointers**: to the brief, the tickets, `FIGMA_STANDARDS.md`, the glossary and design system docs in the UX folder, and the frames already built. Don't duplicate information already available via pointers.
 
-**UX agents** should be run in the background where possible for **maximum concurrency**. Tell each one to call the Skill tool with "figma-writes" before its first write.
+**UX agents** should be run in the background where possible for **maximum concurrency**. Tell each one to call the Skill tool with "figma-writes" before its first write, and that this run's named version is handled: give the version's name, or say the file was new.
 
 ## Steps
 
 1. Read the brief and its tickets. Read enough to understand the task graph.
 
-2. Call the Skill tool with "figma-writes" before your first write. Find the Figma file to design in: the one already linked on the brief, if any; else a file the user points you to; otherwise, where the UX folder config says design files go: a new file named after the brief, created through the Figma MCP in the project folder, or the product file. Comment its link on the brief. Then make one page per ticket in it, named after the ticket, so UX agents never write to the same frames.
+2. Call the Skill tool with "figma-writes" before your first write. Find the Figma file to design in: the one already linked on the brief, if any; else a file the user points you to; otherwise, where the UX folder config says design files go: a new file named after the brief, created through the Figma MCP in the project folder, or the product file. Comment its link on the brief. If the file already has content, save one named version for the whole run as figma-writes says, named after the brief; the UX agents save none of their own. Then make one page per ticket in it, named after the ticket, so UX agents never write to the same frames.
 
 3. If the happy path ticket (the one the others are blocked by) is still open, design it alone, with one UX agent working as in step 4. Label it `ready-for-designer-review`, hand the user its frames, and **stop**: the rest waits. The user reviews it, explores variations if they want (the explore-variants skill), and closes the ticket once the direction is approved. Then they run `/implement-ux-brief` again, which skips to step 4.
 
