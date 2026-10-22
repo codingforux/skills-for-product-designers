@@ -13,7 +13,7 @@ Most work runs along one main flow, from a PRD in to a handed-off design out:
 3. **`/to-ux-brief`** writes the UX brief from the conversation and publishes it to your issue tracker.
 4. **`/to-ux-tickets`** splits a bigger brief into thin slices, each one you can design, review and hand off on its own.
 5. **`/implement-ux-brief`** designs the brief in Figma from your library, one UX agent per ticket, then runs **`ux-review`** and fixes the hard violations itself. You review what's left, like a pull request.
-6. Optional: **`/ux-to-code`** hands the approved design to Matt Pocock's engineering skills, so his `/to-spec` writes the code spec from your brief and frames. Skip it if your team doesn't use his skills.
+6. Optional: **`/handoff-to-matt-pocock-skills`** hands the approved design to Matt Pocock's engineering skills, so his `/to-spec` writes the code spec from your brief and frames. Skip it if your team doesn't use his skills.
 7. **`/agent-retro`** suggests fixes to your standards and docs after a session that went wrong, and writes only the ones you approve.
 
 Not sure which skill fits? Run **`/ask-codingforux`**.
@@ -55,7 +55,7 @@ You run these yourself:
 | [to-ux-brief](./skills/design/to-ux-brief/SKILL.md) | Turn the conversation into a UX brief on the tracker, or update one when scope changes. |
 | [to-ux-tickets](./skills/design/to-ux-tickets/SKILL.md) | Split a brief into thin tickets you can design, review and hand off on their own. |
 | [implement-ux-brief](./skills/design/implement-ux-brief/SKILL.md) | Design the whole brief in Figma with parallel subagents, then review it and fix hard violations. |
-| [ux-to-code](./skills/design/ux-to-code/SKILL.md) | Optional. Hand an approved brief and its Figma frames to Matt Pocock's `/to-spec` for the code side. |
+| [handoff-to-matt-pocock-skills](./skills/design/handoff-to-matt-pocock-skills/SKILL.md) | Optional. Hand an approved brief and its Figma frames to Matt Pocock's `/to-spec` for the code side. |
 | [agent-retro](./skills/design/agent-retro/SKILL.md) | Suggest improvements to your standards, docs, glossary or Figma MCP findings after a session. |
 | [ask-codingforux](./skills/design/ask-codingforux/SKILL.md) | Ask which skill or flow fits your situation. |
 

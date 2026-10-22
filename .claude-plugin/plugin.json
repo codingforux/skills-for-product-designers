@@ -21,13 +21,13 @@
     "./skills/design/explore-variants",
     "./skills/design/figma-writes",
     "./skills/design/grill-prd",
+    "./skills/design/handoff-to-matt-pocock-skills",
     "./skills/design/implement-ux-brief",
     "./skills/design/setup-codingforux-skills",
     "./skills/design/to-ux-brief",
     "./skills/design/to-ux-questionnaire",
     "./skills/design/to-ux-tickets",
     "./skills/design/ux-review",
-    "./skills/design/ux-to-code",
     "./skills/productivity/writing-for-agents"
   ]
 }

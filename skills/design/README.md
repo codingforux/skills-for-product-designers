@@ -10,7 +10,7 @@ Skills for product design work, from a PM's PRD to reviewed designs in Figma.
 - [to-ux-brief](./to-ux-brief/SKILL.md): turn the conversation into a UX brief on the tracker. Run it again with the brief's link to update it when the scope changes.
 - [to-ux-tickets](./to-ux-tickets/SKILL.md): split a brief into thin tickets, each one you can design, review and hand off on its own.
 - [implement-ux-brief](./implement-ux-brief/SKILL.md): design the whole brief in Figma with parallel subagents, one per ticket, then review it and fix the hard violations.
-- [ux-to-code](./ux-to-code/SKILL.md): optional. Hand an approved brief and its Figma frames to Matt Pocock's `/to-spec`, for teams that build with his engineering skills.
+- [handoff-to-matt-pocock-skills](./handoff-to-matt-pocock-skills/SKILL.md): optional. Hand an approved brief and its Figma frames to Matt Pocock's `/to-spec`, for teams that build with his engineering skills.
 - [agent-retro](./agent-retro/SKILL.md): after a session, suggest improvements to the standards, design system docs, glossary or Figma MCP findings, and write the ones you approve.
 - [ask-codingforux](./ask-codingforux/SKILL.md): ask which skill or flow fits your situation.
 

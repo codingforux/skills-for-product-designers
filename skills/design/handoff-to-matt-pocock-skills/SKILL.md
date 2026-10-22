@@ -1,10 +1,10 @@
 ---
-name: ux-to-code
+name: handoff-to-matt-pocock-skills
 description: "Optional: hand a designed UX brief and its Figma frames to Matt Pocock's engineering skills, starting with /to-spec. Needs the mattpocock-skills plugin."
 disable-model-invocation: true
 ---
 
-# UX to code
+# Handoff to Matt Pocock skills
 
 Optional, for teams that build with Matt Pocock's engineering skills (the `mattpocock-skills` plugin). Nothing else in this plugin needs it.
 
