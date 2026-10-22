@@ -1,5 +1,9 @@
 # skills-for-product-designers
 
+## 0.4.2
+
+- figma-writes and implement-ux-brief no longer try to save a named version before writing. The Figma MCP doesn't appear to allow saving versions yet, so the step would end in asking you every time. Figma's automatic version history is the rollback for now; we'll recheck the Figma MCP in a few weeks.
+
 ## 0.4.1
 
 - figma-writes now saves a named version to the Figma file's version history (for example "Before <brief>") before the first write to any file that already has content, so you can restore the whole file in one click. If the agent can't save it, it asks you to save one in Figma first. implement-ux-brief saves one version per run, named after the brief, and its UX agents save none of their own, so a run leaves one backup rather than one per ticket.
