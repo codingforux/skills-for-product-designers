@@ -38,7 +38,7 @@ If a session runs long before `/to-ux-tickets`, don't push on degraded; compact 
 
 One model-invoked reference runs *beneath* the other skills whenever the agent writes to Figma. Reach for it directly when the **write** is the problem, or let the skills above pull it in. Token rules come from your design system docs and `FIGMA_STANDARDS.md`, not a skill.
 
-- **`/figma-writes`**: the playbook for changing a Figma file safely through the Figma MCP: account, call budget, a named version before writing, batching, never publishing the library.
+- **`/figma-writes`**: the playbook for changing a Figma file safely through the Figma MCP: account, call budget, batching, never publishing the library.
 
 ## Phase boundaries
 
