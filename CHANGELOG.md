@@ -1,5 +1,10 @@
 # skills-for-product-designers
 
+## 0.5.0
+
+- New optional skill, `/handoff-to-matt-pocock-skills`, for teams that build with Matt Pocock's engineering skills. Run it in the code repo once a brief's tickets are approved: it reads the brief and the Figma frames its tickets link (states, components and their Code Connect mappings, tokens, interactions, copy, annotations), lays out a handoff for you to check, then tells you to run his `/to-spec` in the same session, followed by `/to-tickets` and `/implement`. Afterwards it links the spec on the brief. It needs the `mattpocock-skills` plugin, and nothing else in this plugin depends on it, so you can ignore it if you don't use his skills.
+- ask-codingforux routes to it as an optional step after implement-ux-brief.
+
 ## 0.4.2
 
 - figma-writes and implement-ux-brief no longer try to save a named version before writing. The Figma MCP doesn't appear to allow saving versions yet, so the step would end in asking you every time. Figma's automatic version history is the rollback for now; we'll recheck the Figma MCP in a few weeks.

@@ -26,11 +26,12 @@ The route most work travels. A PM hands you a PRD and you design it.
    - **No** → **`/implement-ux-brief`** on the brief itself.
 
    Either way, **`/implement-ux-brief`** builds frames from your library, following `FIGMA_STANDARDS.md` from the start, then runs **`/ux-review`** and fixes every hard violation itself. What's left for you is the judgement calls and the frames to review, like a pull request.
-5. **`/agent-retro`**, after a session that went wrong or cost a lot of Figma calls. It suggests fixes to your standards, design system docs, glossary or Figma MCP findings, most serious first, and writes only the ones you approve.
+5. **Optional: handing off to code.** If your team builds with Matt Pocock's engineering skills, run **`/handoff-to-matt-pocock-skills`** in the code repo once every ticket is approved. It reads the brief and the frames and lays out the handoff, then you run his **`/to-spec`** in the same session, followed by his `/to-tickets` and `/implement`. Not using his skills? Skip this step.
+6. **`/agent-retro`**, after a session that went wrong or cost a lot of Figma calls. It suggests fixes to your standards, design system docs, glossary or Figma MCP findings, most serious first, and writes only the ones you approve.
 
 ### Context hygiene
 
-Keep steps 1–4 in **one unbroken context window** where you can, so the grilling, brief and tickets all build on the same thinking. Your team's reply often takes days, and that's fine: the PRD snapshot, the brief and its `needs-alignment` sub-issues carry what was settled, so a new session picks up from them. `/implement-ux-brief` starts fresh, working from the brief and its tickets.
+Keep steps 1–4 in **one unbroken context window** where you can, so the grilling, brief and tickets all build on the same thinking. The same goes for `/handoff-to-matt-pocock-skills` and `/to-spec`: run them back to back, since `/to-spec` writes from the conversation. Your team's reply often takes days, and that's fine: the PRD snapshot, the brief and its `needs-alignment` sub-issues carry what was settled, so a new session picks up from them. `/implement-ux-brief` starts fresh, working from the brief and its tickets.
 
 If a session runs long before `/to-ux-tickets`, don't push on degraded; compact at the nearest phase boundary and carry on (see Phase boundaries).
 

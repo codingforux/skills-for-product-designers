@@ -1,0 +1,5 @@
+interface:
+  display_name: "Handoff to Matt Pocock Skills"
+  short_description: "Hand a designed brief to Matt Pocock's code skills"
+policy:
+  allow_implicit_invocation: false
