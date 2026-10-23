@@ -29,8 +29,7 @@ Not sure which skill fits? Run **`/ask-codingforux`**.
 ### Claude Code
 
 ```
-/plugin marketplace add codingforux/skills-for-product-designers
-/plugin install skills-for-product-designers
+/plugin install skills-for-product-designers --marketplace codingforux/skills-for-product-designers
 ```
 
 ### Any agent
