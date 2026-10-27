@@ -59,7 +59,7 @@ Match each item against the frames:
 
 - The Figma link.
 - The fetched ticket and brief.
-- The task: "Report: (a) user stories the ticket covers that are missing or partial in the frames; (b) requirements the ticket covers that the frames break; (c) screens or behaviour that weren't asked for (scope creep); (d) stories that look designed but where the design looks wrong for the story. Quote the user story or requirement for each finding. A miss against the brief is a hard violation; anything else is a judgement call. Work from the brief alone, without opening persona files. Under 400 words."
+- The task: "Report: (a) user stories the ticket covers that are missing or partial in the frames; (b) acceptance criteria and requirements (functional, and the brief's non-functional ones) that the frames break; (c) screens or behaviour that weren't asked for (scope creep); (d) stories that look designed but where the design looks wrong for the story. Quote the user story or requirement for each finding. A miss against the brief is a hard violation; anything else is a judgement call. Work from the brief alone, without opening persona files. Under 400 words."
 
 **Completeness sub-agent prompt** should include:
 

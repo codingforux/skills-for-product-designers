@@ -30,7 +30,7 @@ Break the work into thin vertical slices.
 - The size of a slice follows the work: a redesign of one screen is one slice; a flow splits by step or by path ("Sign in with a code", "Recover a forgotten password"); a whole product splits by area, then by flow
 - A completed slice can be reviewed and handed off on its own
 - Each slice is sized to fit in a single fresh context window
-- No user story or requirement is left out: each one is covered by some ticket. A ticket may cover several; a requirement that cuts across the whole brief goes on every ticket it touches
+- No user story or requirement is left out: each one is covered by some ticket. A ticket may cover several; a requirement that cuts across the whole brief goes on every ticket it touches. Non-functional requirements (N1, N2…) bind every ticket and stay in the brief
 
 </vertical-slice-rules>
 
@@ -64,7 +64,7 @@ Publish the approved tickets. **How** depends on the tracker `/setup-codingforux
 - **Local markdown** → write one file per ticket under `briefs/<brief-slug>/tickets/<NN>-<slug>.md` in the UX folder, numbered from `01` in dependency order (blockers first). Each file's "Blocked by" lists the numbers/titles it depends on. Use the per-ticket file template below: one ticket per file, never a single combined file.
 - **A real issue tracker (GitHub, GitLab, …)** → publish one issue per ticket as a sub-issue of the brief, in dependency order (blockers first) so each ticket's blocking edges can reference real identifiers. Use the platform's native blocking relationship where it has one; otherwise set each ticket's "Blocked by" to the blocking issues. Apply the `ready-for-ux-agent` label, or `ready-for-designer` to tickets marked human.
 
-Each ticket's checklist is the user stories and requirements it covers, copied word for word from the brief with their numbers.
+Each ticket's checklist is the user stories it covers, each with its acceptance criteria, and the functional requirements it covers, copied word for word from the brief with their numbers.
 
 Work the **frontier**: any ticket whose blockers are all done. For a purely linear chain that means top to bottom.
 
@@ -83,6 +83,7 @@ Do NOT close or modify the brief.
 **Status:** ready-for-ux-agent or ready-for-designer
 
 - [ ] 3. As a <persona>, I want <thing>, so that <benefit>
+  - <acceptance criterion>
 - [ ] 4. As a <persona>, I want <thing>, so that <benefit>
 - [ ] R2. <requirement>
 
@@ -101,6 +102,7 @@ What the user can do once this ticket is designed, from their perspective, not a
 ## User stories
 
 - [ ] 3. As a <persona>, I want <thing>, so that <benefit>
+  - <acceptance criterion>
 - [ ] 4. As a <persona>, I want <thing>, so that <benefit>
 
 ## Requirements

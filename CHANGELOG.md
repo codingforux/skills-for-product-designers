@@ -2,8 +2,9 @@
 
 ## 0.5.1
 
-- Briefs now keep user stories and requirements apart. User Stories is for what each persona can do with the design and why it matters to them; a new numbered **Requirements** section (R1, R2…) holds the rules the design must follow, like naming, ordering, shortcuts, defaults and what's removed, written as plain statements instead of forced into "As a…, I want…" form.
-- to-ux-tickets puts both on each ticket's checklist and leaves none uncovered; ux-review's Brief check, handoff-to-matt-pocock-skills and explore-variants read requirements alongside stories.
+- Briefs follow the usual PRD shape: Problem, Goals and Success Metrics, Users, User Stories, Requirements, Design Scope, Out of Scope, Open Questions.
+- User stories and requirements are now apart. A story is a piece of the design a persona can use, with acceptance criteria under it where "done" isn't obvious. Rules that cut across stories, like naming, ordering, shortcuts and what's removed, go under **Requirements** as plain statements: functional (R1, R2…) and non-functional (N1, N2…), which replaces Constraints. Success Criteria becomes Goals and Success Metrics, near the top.
+- to-ux-tickets puts stories with their acceptance criteria and functional requirements on each ticket's checklist and leaves none uncovered; ux-review's Brief check, handoff-to-matt-pocock-skills and explore-variants read them all.
 
 ## 0.5.0
 
