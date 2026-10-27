@@ -2,7 +2,7 @@
 
 ## 0.5.1
 
-- Briefs now keep user stories and requirements apart. User Stories is for what each persona is trying to get done; a new numbered **Requirements** section (R1, R2…) holds the rules the design must follow, like naming, ordering, shortcuts, defaults and what's removed, written as plain statements instead of forced into "As a…, I want…" form.
+- Briefs now keep user stories and requirements apart. User Stories is for what each persona can do with the design and why it matters to them; a new numbered **Requirements** section (R1, R2…) holds the rules the design must follow, like naming, ordering, shortcuts, defaults and what's removed, written as plain statements instead of forced into "As a…, I want…" form.
 - to-ux-tickets puts both on each ticket's checklist and leaves none uncovered; ux-review's Brief check, handoff-to-matt-pocock-skills and explore-variants read requirements alongside stories.
 
 ## 0.5.0

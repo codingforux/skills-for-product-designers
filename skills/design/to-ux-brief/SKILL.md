@@ -28,7 +28,7 @@ The personas this brief serves, by persona name, each with the goal or need of t
 
 ## User Stories
 
-A numbered list of user stories: what each persona is trying to get done. Each user story should be in the format of:
+A numbered list of user stories: each one a small piece of the design a persona can use, told from their side with the value it gives them. Each user story should be in the format of:
 
 1. As a <persona>, I want <thing>, so that <benefit>
 
@@ -36,7 +36,7 @@ A numbered list of user stories: what each persona is trying to get done. Each u
 1. As a field tech, I want to sign in with a one-time code or my password, so that I can get in without email on site
 </user-story-example>
 
-The actor is always a persona from the persona index. Every goal the design serves gets a story. A rule the design must follow is a requirement, not a story: when the "so that" only restates the "I want", or no persona is doing anything, write it under Requirements.
+The actor is always a persona from the persona index. Every capability the design gives a persona gets a story. A rule the design must follow is a requirement, not a story: when the "so that" only restates the "I want", or no persona is doing anything, write it under Requirements.
 
 ## Requirements
 
