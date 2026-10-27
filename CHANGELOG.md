@@ -1,5 +1,10 @@
 # skills-for-product-designers
 
+## 0.5.1
+
+- Briefs now keep user stories and requirements apart. User Stories is for what each persona is trying to get done; a new numbered **Requirements** section (R1, R2…) holds the rules the design must follow, like naming, ordering, shortcuts, defaults and what's removed, written as plain statements instead of forced into "As a…, I want…" form.
+- to-ux-tickets puts both on each ticket's checklist and leaves none uncovered; ux-review's Brief check, handoff-to-matt-pocock-skills and explore-variants read requirements alongside stories.
+
 ## 0.5.0
 
 - New optional skill, `/handoff-to-matt-pocock-skills`, for teams that build with Matt Pocock's engineering skills. Run it in the code repo once a brief's tickets are approved: it reads the brief and the Figma frames its tickets link (states, components and their Code Connect mappings, tokens, interactions, copy, annotations), lays out a handoff for you to check, then tells you to run his `/to-spec` in the same session, followed by `/to-tickets` and `/implement`. Afterwards it links the spec on the brief. It needs the `mattpocock-skills` plugin, and nothing else in this plugin depends on it, so you can ignore it if you don't use his skills.

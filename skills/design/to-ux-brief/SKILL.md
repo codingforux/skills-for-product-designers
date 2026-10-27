@@ -28,7 +28,7 @@ The personas this brief serves, by persona name, each with the goal or need of t
 
 ## User Stories
 
-A LONG, numbered list of user stories. Each user story should be in the format of:
+A numbered list of user stories: what each persona is trying to get done. Each user story should be in the format of:
 
 1. As a <persona>, I want <thing>, so that <benefit>
 
@@ -36,11 +36,22 @@ A LONG, numbered list of user stories. Each user story should be in the format o
 1. As a field tech, I want to sign in with a one-time code or my password, so that I can get in without email on site
 </user-story-example>
 
-The actor is always a persona from the persona index. This list of user stories should be extremely extensive and cover all aspects of the design.
+The actor is always a persona from the persona index. Every goal the design serves gets a story. A rule the design must follow is a requirement, not a story: when the "so that" only restates the "I want", or no persona is doing anything, write it under Requirements.
+
+## Requirements
+
+A numbered list, R1, R2 and on, of the rules the design must follow: naming, ordering, defaults, shortcuts, what is removed or hidden, behaviour that holds across screens. Each is one plain, checkable statement, with the story numbers it serves in brackets when it serves particular ones.
+
+<requirement-example>
+R1. The app rail reads Projects, Schedule, Work, Documents, with Trash and Settings at the bottom (1, 2)
+R2. The word "Planner" appears nowhere in the app
+</requirement-example>
+
+Together, the stories and requirements cover every aspect of the design.
 
 ## Constraints
 
-What the design must work within: platform, technical limits, deadlines, existing patterns it must match, accessibility needs from the personas. Name breakpoints only when this brief changes the defaults in `FIGMA_STANDARDS.md` (for example "mobile is out of scope").
+Limits from outside the design that it must work within: platform, technical limits, deadlines, existing patterns it must match, accessibility needs from the personas. Name breakpoints only when this brief changes the defaults in `FIGMA_STANDARDS.md` (for example "mobile is out of scope").
 
 ## Success Criteria
 
