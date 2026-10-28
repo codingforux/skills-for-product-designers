@@ -1,5 +1,9 @@
 # skills-for-product-designers
 
+## 0.5.2
+
+- handoff-to-matt-pocock-skills no longer always sends you to Matt's `/to-spec`. When every ticket is approved and nothing is open, it writes a **build spec** with you instead: a short issue that points at your brief for the problem, stories and requirements, and adds only what the code needs (design decisions from the frames, implementation decisions, the agreed test seams, and which modules cover each story and requirement). It publishes it labelled `ready-for-agent` and links it on the brief, then you run `/to-tickets` on it. `/to-spec` is still the route when an open question or undesigned story changes what gets built, and `/implement` for a single small slice.
+
 ## 0.5.1
 
 - Briefs follow the usual PRD shape: Problem, Goals and Success Metrics, Users, User Stories, Requirements, Design Scope, Out of Scope, Open Questions.
