@@ -18,9 +18,13 @@ If the user passes a link to a brief whose body is already written, you are upda
 
 <brief-template>
 
-## Problem Statement
+## Problem
 
 The problem the users are facing, from their perspective.
+
+## Goals and Success Metrics
+
+What this release sets out to achieve, for the users and the business, and how we'll know it worked: a signal to watch for each goal.
 
 ## Users
 
@@ -28,23 +32,36 @@ The personas this brief serves, by persona name, each with the goal or need of t
 
 ## User Stories
 
-A LONG, numbered list of user stories. Each user story should be in the format of:
+A numbered list of user stories: each one a small piece of the design a persona can use, told from their side with the value it gives them. Each user story should be in the format of:
 
 1. As a <persona>, I want <thing>, so that <benefit>
 
+The actor is always a persona from the persona index. Every capability the design gives a persona gets a story.
+
+Under a story, list its **acceptance criteria**: the checkable conditions that tell a reviewer this story is designed right. Give them only where "done" isn't obvious from the story itself. A condition that belongs to one story is an acceptance criterion; one that cuts across stories is a requirement.
+
 <user-story-example>
 1. As a field tech, I want to sign in with a one-time code or my password, so that I can get in without email on site
+   - The code is six digits and fills from the SMS on phones
+   - A wrong code says so and keeps what was typed
 </user-story-example>
 
-The actor is always a persona from the persona index. This list of user stories should be extremely extensive and cover all aspects of the design.
+## Requirements
 
-## Constraints
+The rules the design must follow across stories, each one plain, checkable statement. When the "so that" of a would-be story only restates the "I want", or no persona is doing anything, it belongs here.
 
-What the design must work within: platform, technical limits, deadlines, existing patterns it must match, accessibility needs from the personas. Name breakpoints only when this brief changes the defaults in `FIGMA_STANDARDS.md` (for example "mobile is out of scope").
+### Functional
 
-## Success Criteria
+Numbered R1, R2 and on: naming, ordering, defaults, shortcuts, what is removed or hidden, behaviour that holds across screens.
 
-How we'll know the design worked, from the users' side and the business's.
+<requirement-example>
+R1. The app rail reads Projects, Schedule, Work, Documents, with Trash and Settings at the bottom
+R2. The word "Planner" appears nowhere in the app
+</requirement-example>
+
+### Non-functional
+
+Numbered N1, N2 and on: the limits the design works within. Platform, technical and data limits, deadlines, existing patterns it must match, accessibility needs from the personas. Name breakpoints only when this brief changes the defaults in `FIGMA_STANDARDS.md` (for example "mobile is out of scope").
 
 ## Design Scope
 

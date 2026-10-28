@@ -29,7 +29,7 @@ Make a new page in the same file named `Variants / <frame name>`. Duplicate the 
 
 Draft each variant as its own frame, named `Variant A: <short idea>`. Hold each one to:
 
-- The frame's job and the user stories it serves.
+- The frame's job, and the user stories and requirements it serves.
 - The library's components and tokens, used as the design system docs say. Call the Skill tool with "figma-writes" before your first write.
 - `FIGMA_STANDARDS.md` and the glossary in the UX folder.
 

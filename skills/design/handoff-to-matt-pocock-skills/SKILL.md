@@ -25,11 +25,12 @@ This skill writes the **handoff**: the UX brief and its approved Figma design, l
    - the interactions and transitions between screens, and the copy, verbatim
    - the designer's annotations, and the judgement calls left from the last ux-review
 
-   Done when every linked frame is read and every user story in the brief points at a frame or is marked undesigned.
+   Done when every linked frame is read and every user story and requirement in the brief points at a frame or is marked undesigned.
 
 5. **Write the handoff** in chat, in the glossary's words for anything the user sees:
    - **Problem** and **Users**, from the brief.
-   - **User stories**: every one from the brief, personas kept as the actors, each with its frame links and the states designed for it.
+   - **User stories**: every one from the brief, personas kept as the actors, each with its acceptance criteria, its frame links and the states designed for it.
+   - **Requirements**: every functional and non-functional one from the brief, word for word with its R or N number, each functional one with the frames that show it.
    - **Design decisions**: components and their code mappings, new components, tokens, interactions, copy and breakpoints. These are the design's half of the spec's implementation decisions; modules, APIs, schema and test seams stay with `/to-spec` and the engineer.
    - **Out of scope**, from the brief.
    - **Open**: unapproved tickets, open questions and judgement calls.

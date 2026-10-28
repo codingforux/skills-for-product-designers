@@ -1,12 +1,12 @@
 ---
 name: ux-review
-description: "Review Figma frames along three axes: System (do they follow this product's documented standards and library?), Brief (do they deliver the ticket's or brief's user stories?) and Completeness (are the states and edge cases designed?). Runs the three reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a Figma page, frames, or work in progress against a ticket or brief."
+description: "Review Figma frames along three axes: System (do they follow this product's documented standards and library?), Brief (do they deliver the ticket's or brief's user stories and requirements?) and Completeness (are the states and edge cases designed?). Runs the three reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a Figma page, frames, or work in progress against a ticket or brief."
 ---
 
 Three-axis review of the Figma frames the user supplies:
 
 - **System**: do the frames follow `FIGMA_STANDARDS.md`, the library and its tokens, the design system docs, and the naming rules?
-- **Brief**: do the frames deliver the user stories in the ticket or brief?
+- **Brief**: do the frames deliver the user stories and requirements in the ticket or brief?
 - **Completeness**: are the states and edge cases designed, not just the happy path?
 
 All three axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings. Every Figma read goes through the Figma MCP.
@@ -29,7 +29,7 @@ Look for the ticket or brief, in this order:
 2. A ticket named in the conversation.
 3. If nothing is found, ask the user. If they say there isn't one, the **Brief** sub-agent will skip and report "no brief available".
 
-For a ticket, also fetch its parent brief: the ticket lists which user stories it covers, the brief holds them in full.
+For a ticket, also fetch its parent brief: the ticket lists which user stories and requirements it covers, the brief holds them in full.
 
 ### 3. Identify the standards sources
 
@@ -59,7 +59,7 @@ Match each item against the frames:
 
 - The Figma link.
 - The fetched ticket and brief.
-- The task: "Report: (a) user stories the ticket covers that are missing or partial in the frames; (b) screens or behaviour that weren't asked for (scope creep); (c) stories that look designed but where the design looks wrong for the story. Quote the user story for each finding. A miss against the brief is a hard violation; anything else is a judgement call. Work from the brief alone, without opening persona files. Under 400 words."
+- The task: "Report: (a) user stories the ticket covers that are missing or partial in the frames; (b) acceptance criteria and requirements (functional, and the brief's non-functional ones) that the frames break; (c) screens or behaviour that weren't asked for (scope creep); (d) stories that look designed but where the design looks wrong for the story. Quote the user story or requirement for each finding. A miss against the brief is a hard violation; anything else is a judgement call. Work from the brief alone, without opening persona files. Under 400 words."
 
 **Completeness sub-agent prompt** should include:
 

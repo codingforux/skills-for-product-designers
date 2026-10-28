@@ -16,7 +16,7 @@ This project's Figma rules. `implement-ux-brief` checks against them while build
 ## Layout
 
 - Use auto layout for stacks and lists, and Figma's grid layout or layout grids where content sits in rows and columns. Pick whichever matches how the layout should respond.
-- Design at these breakpoints unless the brief's Constraints change them (for example "mobile is out of scope"):
+- Design at these breakpoints unless the brief's non-functional requirements change them (for example "mobile is out of scope"):
   - <name>: <width>px
 
 ## Copy
