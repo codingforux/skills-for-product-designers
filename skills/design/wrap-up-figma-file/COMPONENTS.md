@@ -32,6 +32,7 @@ A detached instance is evidence: someone needed something the component couldn't
 Mirror the code component when one exists (Code Connect names it): the same properties, names and values, so a designer and an engineer talk about the same component in the same words. Keep common needs as properties; solve uncommon needs by composition.
 
 - **Variants** only for combinations that must look different on the canvas: `State` (default, hover, pressed, disabled, error), `Size`, `Type`. Each variant property is one axis. When combinations pass what a person can scan, move an axis to a property or split the component.
+- **A `Breakpoint` variant**, sparingly: only when the component's structure changes between breakpoints (a nav that collapses into a menu, a table that becomes stacked cards), and only for the breakpoints where it does, named as in `FIGMA_STANDARDS.md`. A component that only gets wider or narrower takes auto layout and resizing instead.
 - **Boolean properties** to show or hide an optional part: a leading icon, helper text, a close button. A boolean often halves a variant set.
 - **Text properties** for every string a designer changes, named like the layer they drive.
 - **Instance swap properties** for one fixed-size part chosen from a set: an icon, an avatar, a trailing control. Set preferred values so the swap menu shows the right ones.
