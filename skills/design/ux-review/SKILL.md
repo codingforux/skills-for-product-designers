@@ -9,7 +9,7 @@ Three-axis review of the Figma frames the user supplies:
 - **Brief**: do the frames deliver the user stories and requirements in the ticket or brief?
 - **Completeness**: are the states and edge cases designed, not just the happy path?
 
-All three axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings. Every Figma read goes through the Figma MCP.
+All three axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings. Every Figma read goes through the Figma MCP: call the Skill tool with "figma-mcp" before your first Figma call, and tell each sub-agent to do the same.
 
 The issue tracker and UX folder should have been provided to you. If the UX folder config is missing, tell the user to run `/setup-codingforux-skills`.
 

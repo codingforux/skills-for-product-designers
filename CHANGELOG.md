@@ -1,5 +1,10 @@
 # skills-for-product-designers
 
+## 0.6.0
+
+- `figma-writes` is now `figma-mcp`, the playbook for every Figma MCP job, reads as well as writes. It adds a short section on reading: read by node, and read each frame once. If you call `/figma-writes` yourself, call `/figma-mcp` now.
+- ux-review and handoff-to-matt-pocock-skills now load it before their first Figma call, so your team's `FIGMA_MCP_FINDINGS.md` reaches every skill that touches Figma, not only the ones that write. explore-variants and implement-ux-brief load it before their first Figma call, not their first write.
+
 ## 0.5.1
 
 - Briefs follow the usual PRD shape: Problem, Goals and Success Metrics, Users, User Stories, Requirements, Design Scope, Out of Scope, Open Questions.

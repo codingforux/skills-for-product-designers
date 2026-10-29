@@ -1,6 +1,6 @@
 # Figma MCP findings
 
-What this team has learned about working through the Figma MCP: limits, traps and workarounds. The figma-writes skill reads it before every Figma job, and agent-retro adds to it. It starts empty.
+What this team has learned about working through the Figma MCP: limits, traps and workarounds. The figma-mcp skill reads it before every Figma job, read or write, and agent-retro adds to it. It starts empty.
 
 ## Rules
 

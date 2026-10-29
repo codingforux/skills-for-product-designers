@@ -1,6 +1,6 @@
 {
   "name": "skills-for-product-designers",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Agent skills for product designers, adapted from Matt Pocock's skills: from a PM's PRD to reviewed designs in Figma.",
   "author": {
     "name": "Ryan",
@@ -19,7 +19,7 @@
     "./skills/design/agent-retro",
     "./skills/design/ask-codingforux",
     "./skills/design/explore-variants",
-    "./skills/design/figma-writes",
+    "./skills/design/figma-mcp",
     "./skills/design/grill-prd",
     "./skills/design/handoff-to-matt-pocock-skills",
     "./skills/design/implement-ux-brief",
