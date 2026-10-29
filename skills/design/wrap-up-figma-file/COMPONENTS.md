@@ -43,22 +43,30 @@ Avoid the **supercomponent**: a component that grows a property for every variat
 
 A **slot** is an area inside a component where a designer places any content while the component keeps its frame, padding, radius and actions. Instances keep library updates however the slot is filled. A property is a closed choice the component defines.
 
-Use a **slot** when:
+Slots get unwieldy fast: every open slot is a place where the file can drift again. Properties are the default. A slot is the exception, earned by evidence and always **tight**.
 
-- The component is a **container** whose body belongs to the consumer: cards, modals, sheets, panels, page and section layouts. In code these take children.
-- It holds **repeating items**: tabs in a tab bar, checkboxes in a group, actions in an alert, rows in a list or menu. A slot replaces "count" variants, pre-placed hidden layers and a stack of instance swaps, which are composition disguised as configuration.
-- The shipped frames show the component **detached to change its content**. That is the clearest sign a slot is missing.
+A slot is earned only when the shipped frames show one of these:
 
-Use **properties** when the content is the component's **contract**: a button's label and icon, an input's label, value and helper text, a chip, a tag. A slot there lets anything in, and the consistency the component exists for leaks out. In code these take typed props.
+- **Repeating items** of one kind: tabs in a tab bar, checkboxes in a group, actions in an alert, rows in a list or menu. Here a slot replaces "count" variants, pre-placed hidden layers and stacks of instance swaps, which are composition disguised as configuration.
+- A **container** (card, modal, sheet, panel) detached again and again just to change its body, where no closed set of variants or properties covers what the frames hold.
 
-When unsure, ask what the code component takes: children means a slot, typed props means properties. With no code yet, start with properties and open a slot only once the shipped frames show content too varied for a closed set.
+Everything else takes properties, above all components whose content is their **contract**: a button's label and icon, an input's label, value and helper text, a chip, a tag. When the code component exists, it settles ties: typed props means properties; children alone doesn't justify a slot.
 
-Build a slot **constrained first**, then open it up:
+Every slot is **tight**. A slot missing any of these is not ready to build:
 
-- Name it for what goes in it (`items`, `actions`, `body`), never `children` or `slot`.
-- Set preferred instances for the expected item types, and minimum and maximum counts for item slots (usually a minimum of 1). These guide, they don't enforce, so write the permitted content in the component's description.
-- Give item slots about three default items, and leave a container's body empty or with typical content, by how predictable it is.
+- **One job**, named for what goes in it (`tabs`, `actions`, `rows`), never `children`, `content` or `slot`.
+- **Preferred only**: a short list of preferred instances, the components the frames actually put there, with "allow preferred only" on.
+- **Counts**: a minimum and a maximum taken from the shipped frames (a tab bar that ships with 2 to 5 tabs gets 2 and 5).
+- **Fixed layout**: direction, spacing and alignment set in the main component, so instances change what's in the slot, never how it sits.
+- **Described**: the component's description lists what the slot accepts and its counts, since Figma warns on a broken limit but doesn't block it.
+- **One slot per component** unless the frames prove two, and never a slot inside a slot.
+
+Each slot is its own Harvest entry, with the evidence and the parameters above, for the user to approve. When unsure, build properties: a slot is easier to add later than to take back, since deleting one wipes what every instance put in it.
+
+Building notes:
+
 - A slot can't be the component's top-level layer, and properties don't work on layers inside a slot: put the property on the nested component instead.
+- Give an item slot its typical number of default items; give a container slot typical content, or leave it empty when its content varies too much to guess.
 - Through the Figma MCP, filling a slot inside an instance can fail. Add content and change existing slot children in separate calls, hide old defaults instead of deleting them, and screenshot after.
 
 ## Names and descriptions
