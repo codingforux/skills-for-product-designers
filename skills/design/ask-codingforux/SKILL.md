@@ -27,7 +27,8 @@ The route most work travels. A PM hands you a PRD and you design it.
 
    Either way, **`/implement-ux-brief`** builds frames from your library, following `FIGMA_STANDARDS.md` from the start, then runs **`/ux-review`** and fixes every hard violation itself. What's left for you is the judgement calls and the frames to review, like a pull request.
 5. **Optional: handing off to code.** If your team builds with Matt Pocock's engineering skills, run **`/handoff-to-matt-pocock-skills`** in the code repo once every ticket is approved. It reads the brief and the frames and lays out the handoff, then you run his **`/to-spec`** in the same session, followed by his `/to-tickets` and `/implement`. Not using his skills? Skip this step.
-6. **`/agent-retro`**, after a session that went wrong or cost a lot of Figma calls. It suggests fixes to your standards, design system docs, glossary or Figma MCP findings, most serious first, and writes only the ones you approve.
+6. **`/wrap-up-figma-file`**, once the project ships. Its Figma file holds everything by then: flows, states, explorations, detached instances. It plans a tidy (one page per shipped flow, an archive for what didn't ship) and a harvest (which patterns become components, and how: variants, properties or slots), walks you through each component decision, then applies what you approve. Library proposals and design system entries come back to you to pass on.
+7. **`/agent-retro`**, after a session that went wrong or cost a lot of Figma calls. It suggests fixes to your standards, design system docs, glossary or Figma MCP findings, most serious first, and writes only the ones you approve.
 
 ### Context hygiene
 

@@ -1,5 +1,10 @@
 # skills-for-product-designers
 
+## 0.7.0
+
+- New skill, `/wrap-up-figma-file`, for when a project ships and its Figma file holds everything. It reads the whole file, then plans a **tidy** (a cover, one page per shipped flow with every state side by side, a components page, an archive that keeps why each idea lost) and a **harvest** (which repeated patterns and detached instances become components, and how to build each: variants, properties or slots). It walks you through every component decision, asks you to save a version in Figma, then applies what you approved. Components that belong in the shared library come back as proposals for its owner, and the decisions the project made come back as proposed design system entries.
+- ask-codingforux routes to it after a project ships.
+
 ## 0.6.0
 
 - `figma-writes` is now `figma-mcp`, the playbook for every Figma MCP job, reads as well as writes. It adds a short section on reading: read by node, and read each frame once. If you call `/figma-writes` yourself, call `/figma-mcp` now.

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Wrap Up Figma File"
+  short_description: "Tidy a project's Figma file and harvest its components"
+policy:
+  allow_implicit_invocation: false
