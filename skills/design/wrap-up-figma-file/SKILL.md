@@ -37,22 +37,24 @@ The file then lives on as the source of truth for this part of the product. Audi
 
    Done when every top-level frame is accounted for.
 
-4. **Plan.** Write the wrap-up plan to the UX folder as `wrap-ups/<file name>.md`, in two parts:
-   - **Tidy**: the target page structure, then every move, rename, archive and status change, by node id.
+4. **Find the seams.** A **seam** is where the shipped work splits into pages: by flow, by product area (each page of a dashboard), by platform, or a mix. Read the candidates off the inventory and the product's own structure, and show the user two or three, each with the pages it makes and what lands on each, recommending one. Done when the user has chosen.
+
+5. **Plan.** Write the wrap-up plan to the UX folder as `wrap-ups/<file name>.md`, in two parts:
+   - **Tidy**: the pages along the chosen seams, then every move, rename, archive and status change, by node id.
    - **Components**: one entry per candidate: the evidence (where it occurs, how often, node ids), the verdict from COMPONENTS.md (reattach, swap to an existing component, extend one, extract a new one, propose to the library, leave), and for each component to build, its API: variants, properties, slots, nested components, name.
    - **Patterns**: one entry per pattern: the problem it solves, where it occurs, the version that wins and why, the screens that solve it differently and whether to align them, the components it's made of, and whether its shell is built as a component (then it also gets a Components entry).
 
    Show the user the plan and walk the Components and Patterns entries one at a time: each is a judgement call. Done when the user has approved, changed or dropped every entry.
 
-5. **Back up.** Ask the user to save a named version in Figma ("Before wrap-up") and wait until they say it's saved. This rewrites much of the file at once.
+6. **Back up.** Ask the user to save a named version in Figma ("Before wrap-up") and wait until they say it's saved. This rewrites much of the file at once.
 
-6. **Tidy.** Apply the approved Tidy entries. Archive instead of deleting.
+7. **Tidy.** Apply the approved Tidy entries. Archive instead of deleting.
 
-7. **Harvest.** Build each approved component where new components go, nested components first. Then replace each occurrence in the shipped frames with an instance, and reattach the detached instances the plan marks. Screenshot each replaced frame against its before state: any visible difference is a bug to fix or a question for the user. Then put each approved pattern's reference example on the Patterns page, and align the screens the plan says to.
+8. **Harvest.** Build each approved component where new components go, nested components first. Then replace each occurrence in the shipped frames with an instance, and reattach the detached instances the plan marks. Screenshot each replaced frame against its before state: any visible difference is a bug to fix or a question for the user. Then put each approved pattern's reference example on the Patterns page, and align the screens the plan says to.
 
-8. **Read back** the file against the plan. Done when every approved entry is applied, or listed as not done with why.
+9. **Read back** the file against the plan. Done when every approved entry is applied, or listed as not done with why.
 
-9. **Report.** Tell the user what changed, then hand over what isn't yours to apply:
+10. **Report.** Tell the user what changed, then hand over what isn't yours to apply:
    - **Library proposals**: components, variants or slots that belong in the shared library, with their evidence, for its owner. The library owner publishes.
    - **Design system entries**: each approved pattern (the problem, when to use it, a link to its reference example) and each decision this project made (when to use a new component over its sibling), as proposed lines for the design system docs. Write each one only once the user agrees.
 
