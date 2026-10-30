@@ -1,6 +1,6 @@
 # File structure
 
-The target shape for a wrapped-up project file. Adapt it to what the file holds. The test: anyone can find a shipped screen, one of its states, or why a decision was made, without asking.
+The target shape for a wrapped-up project file. The test: anyone can find a shipped screen, one of its states, or why a decision was made, without asking.
 
 ## Pages
 
@@ -35,7 +35,6 @@ A component lives with the seam that uses it, and moves to `🧩 Shared componen
 
 ## Frames and sections
 
-- Frames are named `<Flow> / <Screen> / <State>` per `FIGMA_STANDARDS.md`.
 - The shipped version of a screen lives on its seam's page. Older versions move to the Archive; never keep a second copy beside the shipped one.
 - Mark each shipped screen's section **Completed** in Dev Mode. Some plans can't set it: report that and move on.
 - Annotations and notes that explain a shipped decision stay beside their frame. Ones about work in progress go to the Archive with what they discuss.

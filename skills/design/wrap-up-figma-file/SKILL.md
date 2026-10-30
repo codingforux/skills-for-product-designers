@@ -13,13 +13,11 @@ A project just shipped and its Figma file holds everything: flows, error states,
 
 Keep three words apart:
 
-- A **UI component** is a design system idea: a reusable UI element with one job and a defined API, that designers and engineers name the same way: a button, a card, a tab bar. It's found in repeated frames, detached instances and near-duplicate Figma components, and harvesting it means building it well.
-- A **Figma component** is Figma's mechanism for making anything reusable: a main component and its instances. Every UI component is built as a Figma component, but a Figma component isn't always a UI component: it can also be a pattern's shell, a cover template or an annotation.
+- A **UI component** is a design system idea: a reusable UI element with one job and a defined API, that designers and engineers name the same way: a button, a card, a tab bar. Plain "component" in this skill means a UI component.
+- A **Figma component** is Figma's mechanism for making anything reusable: a main component and its instances. Every UI component is built as a Figma component, but a Figma component can also be a pattern's shell, a cover template or an annotation.
 - A **pattern** is a recurring way the product solves a user problem, made of UI components: a form, an empty state, inline validation, confirming before a delete. Harvesting it means choosing the version that wins, documenting when to use it, and keeping one reference example. When its **shell** is the same every time and only the inside varies (a form: title, fields, submit), it is also built as a Figma component, with the varying part as a slot or properties. When the arrangement itself changes from screen to screen (confirming a delete is a dialog here and an inline undo there), it stays documented.
 
-In this skill and its files, a plain "component" always means a UI component, and Figma's mechanism is always "Figma component" (with its main component and instances).
-
-The file then lives on as the source of truth for this part of the product. Audit first, act only on what the user approves.
+The file then lives on as the source of truth for this part of the product.
 
 ## Steps
 
@@ -35,11 +33,11 @@ The file then lives on as the source of truth for this part of the product. Audi
    - every **pattern**: the same user problem solved across flows, noting where it's solved differently
    - frames that break `FIGMA_STANDARDS.md` naming, and raw values where a token belongs
 
-   Read **lean** either way: one script per page that returns only ids, names and counts, never node trees or screenshots, split by section when a page is too big for one call's output. A big file's full trees would flood your context long before the inventory is done.
+   Read **lean** either way: one script per page that returns only ids, names and counts, never node trees or screenshots, split by section when a page is too big for one call's output.
 
    Then pick the read path:
-   - **A bridge**: if the user has a Figma MCP bridge connected (a plugin running in their Figma desktop app, outside the Figma MCP's call limit), or the config or `FIGMA_MCP_FINDINGS.md` names one, do the inventory through it. Ask the user once whether one is connected when neither says.
-   - **The Figma MCP**: reads count against the plan's call limit, and a big file spends it fast. Count the pages and top-level frames from one metadata read, estimate the inventory's calls, and tell the user before going on. If the estimate runs past the limit, agree which pages to inventory now and which next time.
+   - **A Figma MCP bridge** (a plugin in the Figma desktop app, outside the call limit), when the config or `FIGMA_MCP_FINDINGS.md` names one or the user says one is connected. Ask once when neither says.
+   - **The Figma MCP** otherwise: reads count against the plan's call limit. From one metadata read, estimate the inventory's calls and tell the user; past the limit, agree which pages to inventory now and which next time.
 
    Done when every top-level frame is accounted for.
 

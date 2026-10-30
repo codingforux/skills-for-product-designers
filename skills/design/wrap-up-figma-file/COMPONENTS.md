@@ -1,6 +1,6 @@
 # Components
 
-How to decide what becomes a UI component (a plain "component" here) and how to build it as a Figma component. This covers a pattern's shell too, when SKILL.md says it's built as a Figma component: a form shell is a container whose fields go in a slot. The aim is a small set of components you keep using and improving every time you return to this part of the product: each with one job, and an API that matches how designers actually vary it.
+How to decide what becomes a component and how to build it as a Figma component. A pattern's shell, when built, follows the same rules.
 
 ## When to extract
 
@@ -17,7 +17,7 @@ Before building anything new, look for a **home** in what exists, in this order:
 2. A library component missing a variant or property: a **library proposal** for its owner.
 3. A local component in this file: add the variant or property to it.
 
-Build a new component only when none fits. Build it **local** to this file. It becomes a library proposal only when other teams or product areas need it too; the library team decides what joins the library.
+Build a new component only when none fits, **local** to this file. It becomes a library proposal only when other teams or product areas need it too.
 
 ## Detached instances
 
@@ -42,16 +42,14 @@ Avoid the **supercomponent**: a component that grows a property for every variat
 
 ## Slots
 
-A **slot** is an area inside a component where a designer places any content while the component keeps its frame, padding, radius and actions. Instances keep library updates however the slot is filled. A property is a closed choice the component defines.
-
-Slots get unwieldy fast: every open slot is a place where the file can drift again. Properties are the default. A slot is the exception, earned by evidence and always **tight**.
+A **slot** is an area inside a component where a designer places any content while the component keeps its frame, padding, radius and actions. Slots get unwieldy fast, so properties are the default and a slot is the exception: earned by evidence, and always **tight**.
 
 A slot is earned only when the shipped frames show one of these:
 
 - **Repeating items** of one kind: tabs in a tab bar, checkboxes in a group, actions in an alert, rows in a list or menu. Here a slot replaces "count" variants, pre-placed hidden layers and stacks of instance swaps, which are composition disguised as configuration.
 - A **container** (card, modal, sheet, panel) detached again and again just to change its body, where no closed set of variants or properties covers what the frames hold.
 
-Everything else takes properties, above all components whose content is their **contract**: a button's label and icon, an input's label, value and helper text, a chip, a tag. When the code component exists, it settles ties: typed props means properties; children alone doesn't justify a slot.
+Everything else takes properties, above all components whose content is their **contract**: a button's label and icon, an input's label, value and helper text, a chip, a tag. A code component that takes children doesn't by itself justify a slot.
 
 Every slot is **tight**. A slot missing any of these is not ready to build:
 
@@ -62,7 +60,7 @@ Every slot is **tight**. A slot missing any of these is not ready to build:
 - **Described**: the component's description lists what the slot accepts and its counts, since Figma warns on a broken limit but doesn't block it.
 - **One slot per component** unless the frames prove two, and never a slot inside a slot.
 
-Each slot is its own Harvest entry, with the evidence and the parameters above, for the user to approve. When unsure, build properties: a slot is easier to add later than to take back, since deleting one wipes what every instance put in it.
+Each slot gets its own plan entry, with its evidence and these parameters. When unsure, build properties: deleting a slot later wipes what every instance put in it.
 
 Building notes:
 
