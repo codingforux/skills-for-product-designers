@@ -50,7 +50,7 @@ The file then lives on as the source of truth for this part of the product. Audi
 
 7. **Tidy.** Apply the approved Tidy entries. Archive instead of deleting.
 
-8. **Harvest.** Build each approved component where new components go, nested components first. Then replace each occurrence in the shipped frames with an instance, and reattach the detached instances the plan marks. Screenshot each replaced frame against its before state: any visible difference is a bug to fix or a question for the user. Then put each approved pattern's reference example on the Patterns page, and align the screens the plan says to.
+8. **Harvest.** Build each approved component where new components go, nested components first. Then replace each occurrence in the shipped frames with an instance, and reattach the detached instances the plan marks. Screenshot each replaced frame against its before state: any visible difference is a bug to fix or a question for the user. Then put each approved pattern's reference example on the 📐 Patterns page, and align the screens the plan says to.
 
 9. **Read back** the file against the plan. Done when every approved entry is applied, or listed as not done with why.
 
