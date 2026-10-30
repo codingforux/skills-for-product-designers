@@ -13,9 +13,11 @@ A project just shipped and its Figma file holds everything: flows, error states,
 
 Keep three words apart:
 
-- A **component** is a design system idea: a reusable UI element with one job and a defined API, that designers and engineers name the same way: a button, a card, a tab bar. It's found in repeated frames, detached instances and near-duplicate Figma components, and harvesting it means building it well.
-- A **Figma component** is Figma's mechanism for making anything reusable: a main component and its instances. Every component is built as a Figma component, but a Figma component isn't always a component: it can also be a pattern's shell, a cover template or an annotation. When this skill means the mechanism, it says Figma component.
-- A **pattern** is a recurring way the product solves a user problem, made of components: a form, an empty state, inline validation, confirming before a delete. Harvesting it means choosing the version that wins, documenting when to use it, and keeping one reference example. When its **shell** is the same every time and only the inside varies (a form: title, fields, submit), it is also built as a Figma component, with the varying part as a slot or properties. When the arrangement itself changes from screen to screen (confirming a delete is a dialog here and an inline undo there), it stays documented.
+- A **UI component** is a design system idea: a reusable UI element with one job and a defined API, that designers and engineers name the same way: a button, a card, a tab bar. It's found in repeated frames, detached instances and near-duplicate Figma components, and harvesting it means building it well.
+- A **Figma component** is Figma's mechanism for making anything reusable: a main component and its instances. Every UI component is built as a Figma component, but a Figma component isn't always a UI component: it can also be a pattern's shell, a cover template or an annotation.
+- A **pattern** is a recurring way the product solves a user problem, made of UI components: a form, an empty state, inline validation, confirming before a delete. Harvesting it means choosing the version that wins, documenting when to use it, and keeping one reference example. When its **shell** is the same every time and only the inside varies (a form: title, fields, submit), it is also built as a Figma component, with the varying part as a slot or properties. When the arrangement itself changes from screen to screen (confirming a delete is a dialog here and an inline undo there), it stays documented.
+
+In this skill and its files, a plain "component" always means a UI component, and Figma's mechanism is always "Figma component" (with its main component and instances).
 
 The file then lives on as the source of truth for this part of the product. Audit first, act only on what the user approves.
 
