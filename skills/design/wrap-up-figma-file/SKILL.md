@@ -11,7 +11,7 @@ A project just shipped and its Figma file holds everything: flows, error states,
 - **Tidy**: organise the file so that, months from now, designers can find any shipped screen, state or decision.
 - **Harvest**: find the components and patterns the project grew, and make each one something that can be used or easily worked on in the future.
 
-Keep three words apart:
+Three distinctions:
 
 - A **UI component** is a design system idea: a reusable UI element with one job and a defined API, that designers and engineers name the same way: a button, a card, a tab bar. Plain "component" in this skill means a UI component.
 - A **Figma component** is Figma's mechanism for making anything reusable: a main component and its instances. Every UI component is built as a Figma component, but a Figma component can also be a pattern's shell, a cover template or an annotation.
