@@ -18,7 +18,7 @@ This skill writes the **handoff**: the UX brief and its approved Figma design, l
 
 3. **Check the design is approved.** Approved means every ticket is closed and no `needs-alignment` question is open. List anything still open with what it blocks, and ask the user whether to hand off now with those marked open, or stop. Done when everything is closed or the user chose to go on.
 
-4. **Read the frames.** Read the frames the tickets link through the Figma MCP, and only those; if `docs/ux/FIGMA_MCP_FINDINGS.md` is here, read it first. This skill only reads Figma. From each frame, collect what an engineer needs and the brief doesn't say:
+4. **Read the frames.** Read the frames the tickets link through the Figma MCP, and only those. Call the Skill tool with "figma-mcp" before your first Figma call. This skill only reads Figma. From each frame, collect what an engineer needs and the brief doesn't say:
    - the screens and states it shows (empty, loading, error, edge cases) and the user stories each covers
    - the library components it uses, with the code component Code Connect maps to each, if any, and anything built outside the library, which becomes new code
    - the variables and styles it binds, by name

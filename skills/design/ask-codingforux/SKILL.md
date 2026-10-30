@@ -37,9 +37,9 @@ If a session runs long before `/to-ux-tickets`, don't push on degraded; compact 
 
 ## Underneath
 
-One model-invoked reference runs *beneath* the other skills whenever the agent writes to Figma. Reach for it directly when the **write** is the problem, or let the skills above pull it in. Token rules come from your design system docs and `FIGMA_STANDARDS.md`, not a skill.
+One model-invoked reference runs *beneath* the other skills whenever the agent reads or writes Figma. Reach for it directly when a **Figma MCP call** is the problem, or let the skills above pull it in. Token rules come from your design system docs and `FIGMA_STANDARDS.md`, not a skill.
 
-- **`/figma-writes`**: the playbook for changing a Figma file safely through the Figma MCP: account, call budget, batching, never publishing the library.
+- **`/figma-mcp`**: the playbook for reading and changing Figma files safely through the Figma MCP: account, call budget, reading by node, batching, never publishing the library. It also loads your team's Figma MCP findings.
 
 ## Phase boundaries
 

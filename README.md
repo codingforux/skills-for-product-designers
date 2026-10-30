@@ -65,7 +65,7 @@ The agent reaches for these on its own (you can also call them directly):
 | --- | --- |
 | [explore-variants](./skills/design/explore-variants/SKILL.md) | Lay out several radically different variants in Figma, to pick a direction. |
 | [ux-review](./skills/design/ux-review/SKILL.md) | Review Figma frames on three axes: System, Brief and Completeness. |
-| [figma-writes](./skills/design/figma-writes/SKILL.md) | The playbook for writing to Figma safely through the Figma MCP. |
+| [figma-mcp](./skills/design/figma-mcp/SKILL.md) | The playbook for reading and writing Figma safely through the Figma MCP. |
 
 ### Productivity
 
