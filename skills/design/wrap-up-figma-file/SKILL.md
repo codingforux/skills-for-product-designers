@@ -26,6 +26,7 @@ A big file's reads and writes would bury the plan in your context. So you are th
 - Brief each one through **context pointers**, not pasted content: the file key and node ids, the plan file and the entry ids it owns, this skill's reference file it needs, and the read path from step 3.
 - Tell each to call the Skill tool with "figma-mcp" before its first Figma call.
 - Run them in the background, in parallel, unless two would touch the same frames.
+- Run each on the model the user picked for its type in step 3.
 - Their reports are lean: what they did, by node id, and anything they couldn't do or that needs the user. Never node trees or screenshots.
 
 ## Scratch folder
@@ -38,9 +39,11 @@ The inventory and the plan are working files for this run only: they go stale as
 
 2. **Get the file and the story.** Ask for the Figma file link and the briefs it delivered. Ask what shipped, and what was explored and dropped: the file can't tell you which. Ask where this team keeps components for this part of the product, unless the config or design system docs say. Done when you know the file, its briefs, which flows shipped, and where new components go.
 
-3. **Pick the read path.**
-   - **A Figma MCP bridge** (a plugin in the Figma desktop app, outside the call limit), when the config or `FIGMA_MCP_FINDINGS.md` names one or the user says one is connected. Ask once when neither says.
-   - **The Figma MCP** otherwise: every subagent's calls count against the plan's call limit. From one metadata read of the page list, estimate the whole job's calls and tell the user; past the limit, agree which pages to do now and which next time.
+3. **Pick the models and the read path.**
+   - **Models**: ask the user which model to use for each subagent type: inventory, tidy, build, pattern and check agents. Recommend a fast model for inventory and check agents, which read and summarise, and the most capable one for build agents, which make the component decisions in Figma. Use what they pick for the whole run.
+   - **Read path**: one of
+     - **A Figma MCP bridge** (a plugin in the Figma desktop app, outside the call limit), when the config or `FIGMA_MCP_FINDINGS.md` names one or the user says one is connected. Ask once when neither says.
+     - **The Figma MCP** otherwise: every subagent's calls count against the plan's call limit. From one metadata read of the page list, estimate the whole job's calls and tell the user; past the limit, agree which pages to do now and which next time.
 
 4. **Inventory.** Start one **inventory agent** per page. Each reads its page lean (scripts that return ids, names and counts, split by section when a page is too big for one call), writes `inventory/<page>.md` in the scratch folder, and reports one line. Each records, by node id:
    - every section and top-level frame, and the flow and state each belongs to
