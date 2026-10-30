@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 A project just shipped and its Figma file holds everything: flows, error states, explorations, new components and patterns, and instances detached in the rush to finish. This is the file's **retro**, with two jobs:
 
-- **Tidy**: organise the file so that, months from now, you or another agent can find any shipped screen, state or decision.
+- **Tidy**: organise the file so that, months from now, designers can find any shipped screen, state or decision.
 - **Harvest**: find the components and patterns the project grew, and make each one something that can be used or easily worked on in the future.
 
 Keep three words apart:
