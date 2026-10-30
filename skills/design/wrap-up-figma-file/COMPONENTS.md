@@ -1,10 +1,10 @@
 # Components
 
-How to decide what becomes a component and how to build it. The aim is a small set of components you keep using and improving every time you return to this part of the product: each with one job, and an API that matches how designers actually vary it.
+How to decide what becomes a component and how to build it. Patterns, which are made of components, are documented, not built: see SKILL.md. The aim is a small set of components you keep using and improving every time you return to this part of the product: each with one job, and an API that matches how designers actually vary it.
 
 ## When to extract
 
-Extract when the pattern has a **job** and a **future**:
+Extract when a repeated build has a **job** and a **future**:
 
 - It appears **three or more times** in the shipped frames, built the same way, or
 - It appears twice and the brief's roadmap or the user says it will recur.
