@@ -1,6 +1,6 @@
 # Components
 
-How to decide what becomes a component and how to build it. Patterns, which are made of components, are documented, not built: see SKILL.md. The aim is a small set of components you keep using and improving every time you return to this part of the product: each with one job, and an API that matches how designers actually vary it.
+How to decide what becomes a component and how to build it. This covers a pattern's shell too, when SKILL.md says it's built as a component: a form shell is a container whose fields go in a slot. The aim is a small set of components you keep using and improving every time you return to this part of the product: each with one job, and an API that matches how designers actually vary it.
 
 ## When to extract
 

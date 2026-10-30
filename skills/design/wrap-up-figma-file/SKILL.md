@@ -11,7 +11,7 @@ A project just shipped and its Figma file holds everything: flows, error states,
 - **Tidy**: organise the file so that, months from now, you or another agent can find any shipped screen, state or decision in a minute.
 - **Harvest**: find the components and patterns the project grew, and make each one something the next project in this part of the product starts from.
 
-A **component** is a building block in Figma: a button, a card, a tab bar. It's found in repeated frames, detached instances and near-duplicate components, and harvesting it means building it well. A **pattern** is a recurring way the product solves a user problem, made of components: an empty state, inline form validation, confirming before a delete, a first-run checklist. Its content and arrangement change from screen to screen, so it is not one component. Harvesting it means choosing the version that wins, documenting when to use it, and keeping one reference example. A pattern may need new components; it never becomes one.
+A **component** is a building block in Figma: a button, a card, a tab bar. It's found in repeated frames, detached instances and near-duplicate components, and harvesting it means building it well. A **pattern** is a recurring way the product solves a user problem, made of components: a form, an empty state, inline validation, confirming before a delete. Harvesting it means choosing the version that wins, documenting when to use it, and keeping one reference example. When its **shell** is the same every time and only the inside varies (a form: title, fields, submit), it is also built as a component, with the varying part as a slot or properties. When the arrangement itself changes from screen to screen (confirming a delete is a dialog here and an inline undo there), it stays documented.
 
 The file then lives on as the source of truth for this part of the product. Audit first, act only on what the user approves.
 
@@ -40,7 +40,7 @@ The file then lives on as the source of truth for this part of the product. Audi
 4. **Plan.** Write the wrap-up plan to the UX folder as `wrap-ups/<file name>.md`, in two parts:
    - **Tidy**: the target page structure, then every move, rename, archive and status change, by node id.
    - **Components**: one entry per candidate: the evidence (where it occurs, how often, node ids), the verdict from COMPONENTS.md (reattach, swap to an existing component, extend one, extract a new one, propose to the library, leave), and for each component to build, its API: variants, properties, slots, nested components, name.
-   - **Patterns**: one entry per pattern: the problem it solves, where it occurs, the version that wins and why, the screens that solve it differently and whether to align them, and the components it's made of.
+   - **Patterns**: one entry per pattern: the problem it solves, where it occurs, the version that wins and why, the screens that solve it differently and whether to align them, the components it's made of, and whether its shell is built as a component (then it also gets a Components entry).
 
    Show the user the plan and walk the Components and Patterns entries one at a time: each is a judgement call. Done when the user has approved, changed or dropped every entry.
 
