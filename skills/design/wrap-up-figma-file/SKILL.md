@@ -28,6 +28,10 @@ A big file's reads and writes would bury the plan in your context. So you are th
 - Run them in the background, in parallel, unless two would touch the same frames.
 - Their reports are lean: what they did, by node id, and anything they couldn't do or that needs the user. Never node trees or screenshots.
 
+## Scratch folder
+
+The inventory and the plan are working files for this run only: they go stale as soon as the file changes. Keep them in a **scratch folder** outside the repo and the UX folder (a new folder in the system temp directory), never in anything that gets committed, and delete it at the end.
+
 ## Steps
 
 1. **Load the playbooks.** Call the Skill tool with "figma-mcp". Read the UX folder config, `FIGMA_STANDARDS.md`, the glossary and the design system docs; if the config is missing, tell the user to run `/setup-codingforux-skills`.
@@ -38,7 +42,7 @@ A big file's reads and writes would bury the plan in your context. So you are th
    - **A Figma MCP bridge** (a plugin in the Figma desktop app, outside the call limit), when the config or `FIGMA_MCP_FINDINGS.md` names one or the user says one is connected. Ask once when neither says.
    - **The Figma MCP** otherwise: every subagent's calls count against the plan's call limit. From one metadata read of the page list, estimate the whole job's calls and tell the user; past the limit, agree which pages to do now and which next time.
 
-4. **Inventory.** Start one **inventory agent** per page. Each reads its page lean (scripts that return ids, names and counts, split by section when a page is too big for one call), writes `wrap-ups/<file name>/inventory/<page>.md` in the UX folder, and reports one line. Each records, by node id:
+4. **Inventory.** Start one **inventory agent** per page. Each reads its page lean (scripts that return ids, names and counts, split by section when a page is too big for one call), writes `inventory/<page>.md` in the scratch folder, and reports one line. Each records, by node id:
    - every section and top-level frame, and the flow and state each belongs to
    - every **detached instance**, grouped by the Figma component it came from, with what changed after detaching
    - every local Figma component and component set, and how many instances each has
@@ -50,7 +54,7 @@ A big file's reads and writes would bury the plan in your context. So you are th
 
 5. **Find the seams.** Read [FILE-STRUCTURE.md](FILE-STRUCTURE.md) and the inventory files. A **seam** is where the shipped work splits into pages: by flow, by product area (each page of a dashboard), by platform, or a mix. Show the user two or three candidates, each with the pages it makes and what lands on each, recommending one. Done when the user has chosen.
 
-6. **Plan.** Read [COMPONENTS.md](COMPONENTS.md). Write the wrap-up plan to `wrap-ups/<file name>/plan.md` in the UX folder, giving every entry an id:
+6. **Plan.** Read [COMPONENTS.md](COMPONENTS.md). Write the wrap-up plan to `plan.md` in the scratch folder, giving every entry an id:
    - **Tidy**: the pages along the chosen seams, then every move, rename, archive and status change, by node id.
    - **Components**: one entry per candidate: the evidence (where it occurs, how often, node ids), the verdict from COMPONENTS.md (reattach, swap to an existing component, extend one, extract a new one, propose to the library, leave), and for each component to build, its API (variants, properties, slots, nested components, name), its home (its seam's components page, or `🧩 Shared components`), and the components it nests.
    - **Patterns**: one entry per pattern: the problem it solves, where it occurs, the version that wins and why, the screens that solve it differently and whether to align them, the components it's made of, and whether its shell is built as a Figma component (then the shell also gets an entry under Components).
@@ -69,4 +73,4 @@ A big file's reads and writes would bury the plan in your context. So you are th
    - **Library proposals**: components, variants or slots that belong in the shared library, with their evidence, for its owner. The library owner publishes.
    - **Design system entries**: each approved pattern (the problem, when to use it, a link to its reference example) and each decision this project made (when to use a new component over its sibling), as proposed lines for the design system docs. Write each one only once the user agrees.
 
-   Update the plan file to match what was done, so the next wrap-up of this file starts from it.
+12. **Clean up.** Delete the scratch folder. The file itself, the report, and the entries the user approved for the design system docs are what lasts.
