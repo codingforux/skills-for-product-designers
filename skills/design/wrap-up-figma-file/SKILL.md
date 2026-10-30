@@ -59,11 +59,11 @@ The inventory and the plan are working files for this run only: they go stale as
    - **Components**: one entry per candidate: the evidence (where it occurs, how often, node ids), the verdict from COMPONENTS.md (reattach, swap to an existing component, extend one, extract a new one, propose to the library, leave), and for each component to build, its API (variants, properties, slots, nested components, name), its home (its seam's components page, or `🧩 Shared components`), and the components it nests.
    - **Patterns**: one entry per pattern: the problem it solves, where it occurs, the version that wins and why, the screens that solve it differently and whether to align them, the components it's made of, and whether its shell is built as a Figma component (then the shell also gets an entry under Components).
 
-   Show the user the plan and walk the Components and Patterns entries one at a time: each is a judgement call. Done when the user has approved, changed or dropped every entry.
+   Show the user the plan. Take the Tidy section as a whole, as a list of pages with what lands on each, then walk the Components and Patterns entries one at a time: each is a judgement call. Done when the user has approved the Tidy section and approved, changed or dropped every other entry.
 
 7. **Back up.** Ask the user to save a named version in Figma ("Before wrap-up") and wait until they say it's saved. This rewrites much of the file at once.
 
-8. **Tidy.** Start one **tidy agent** with the Tidy entries and FILE-STRUCTURE.md. One agent, since moves cross pages. It archives instead of deleting.
+8. **Tidy.** Start one **tidy agent** with the Tidy entries and FILE-STRUCTURE.md. It applies the moves exactly as the plan places them, and asks you about any frame the plan doesn't place. One agent, since moves cross pages. It archives instead of deleting.
 
 9. **Harvest.** Start one **build agent** per approved Components entry, pointed at its entry and COMPONENTS.md. Each builds its component in its home, replaces the occurrences in the shipped frames with instances, reattaches the detached instances its entry marks, and screenshots each replaced frame against its before state, reporting any visible difference. Start an entry only once the components it nests are built, and run two at once only when their entries share no frame. Then start one **pattern agent** per approved Patterns entry, which puts the reference example on the 📐 Patterns page and aligns the screens its entry names.
 
