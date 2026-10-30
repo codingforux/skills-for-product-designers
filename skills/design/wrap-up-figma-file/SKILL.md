@@ -41,7 +41,7 @@ The file then lives on as the source of truth for this part of the product. Audi
 
 5. **Plan.** Write the wrap-up plan to the UX folder as `wrap-ups/<file name>.md`, in two parts:
    - **Tidy**: the pages along the chosen seams, then every move, rename, archive and status change, by node id.
-   - **Components**: one entry per candidate: the evidence (where it occurs, how often, node ids), the verdict from COMPONENTS.md (reattach, swap to an existing component, extend one, extract a new one, propose to the library, leave), and for each component to build, its API: variants, properties, slots, nested components, name.
+   - **Components**: one entry per candidate: the evidence (where it occurs, how often, node ids), the verdict from COMPONENTS.md (reattach, swap to an existing component, extend one, extract a new one, propose to the library, leave), and for each component to build, its API (variants, properties, slots, nested components, name) and its home: its seam's components page, or the shared one.
    - **Patterns**: one entry per pattern: the problem it solves, where it occurs, the version that wins and why, the screens that solve it differently and whether to align them, the components it's made of, and whether its shell is built as a component (then it also gets a Components entry).
 
    Show the user the plan and walk the Components and Patterns entries one at a time: each is a judgement call. Done when the user has approved, changed or dropped every entry.
