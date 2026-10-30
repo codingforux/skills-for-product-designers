@@ -29,7 +29,7 @@ The file then lives on as the source of truth for this part of the product. Audi
    - every **pattern**: the same user problem solved across flows, noting where it's solved differently
    - frames that break `FIGMA_STANDARDS.md` naming, and raw values where a token belongs
 
-   Use one scripted read per page that returns a summary, over many small reads. Done when every top-level frame is accounted for.
+   Reads count against the Figma plan's call limit, and a big file can spend it fast. Before the first read, count the pages and top-level frames from one metadata read of the file, estimate the calls the inventory will take, and tell the user. Then read with one script per page that returns only ids, names and counts, never node trees or screenshots. A page too big for one call's output gets split by section. If the estimate runs past the limit, agree with the user which pages to inventory now and which next time. Done when every top-level frame is accounted for.
 
 4. **Plan.** Write the wrap-up plan to the UX folder as `wrap-ups/<file name>.md`, in two parts:
    - **Tidy**: the target page structure, then every move, rename, archive and status change, by node id.
