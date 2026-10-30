@@ -1,6 +1,6 @@
 ---
 name: wrap-up-figma-file
-description: "After a project ships, tidy its Figma file and harvest the components and patterns it grew, so you can keep building on them."
+description: "Used after a project ships to tidy its Figma file and harvest the components and patterns it grew."
 disable-model-invocation: true
 ---
 
