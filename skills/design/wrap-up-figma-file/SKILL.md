@@ -9,7 +9,7 @@ disable-model-invocation: true
 A project just shipped and its Figma file holds everything: flows, error states, explorations, new components and patterns, and instances detached in the rush to finish. This is the file's **retro**, with two jobs:
 
 - **Tidy**: organise the file so that, months from now, you or another agent can find any shipped screen, state or decision.
-- **Harvest**: find the components and patterns the project grew, and make each one something the next project in this part of the product starts from.
+- **Harvest**: find the components and patterns the project grew, and make each one something that can be used or easily worked on in the future.
 
 A **component** is a building block in Figma: a button, a card, a tab bar. It's found in repeated frames, detached instances and near-duplicate components, and harvesting it means building it well. A **pattern** is a recurring way the product solves a user problem, made of components: a form, an empty state, inline validation, confirming before a delete. Harvesting it means choosing the version that wins, documenting when to use it, and keeping one reference example. When its **shell** is the same every time and only the inside varies (a form: title, fields, submit), it is also built as a component, with the varying part as a slot or properties. When the arrangement itself changes from screen to screen (confirming a delete is a dialog here and an inline undo there), it stays documented.
 
