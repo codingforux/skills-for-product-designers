@@ -19,7 +19,7 @@ The file then lives on as the source of truth for this part of the product. Audi
 
 1. **Load the playbooks.** Call the Skill tool with "figma-mcp". Read the UX folder config, `FIGMA_STANDARDS.md`, the glossary and the design system docs; if the config is missing, tell the user to run `/setup-codingforux-skills`. Then read [COMPONENTS.md](COMPONENTS.md) and [FILE-STRUCTURE.md](FILE-STRUCTURE.md) in this skill folder.
 
-2. **Get the file and the story.** Ask for the Figma file link and the briefs it delivered. Ask what shipped, and what was explored and dropped: the file can't tell you which. Done when you know the file, its briefs, and which flows shipped.
+2. **Get the file and the story.** Ask for the Figma file link and the briefs it delivered. Ask what shipped, and what was explored and dropped: the file can't tell you which. Ask where this team keeps components for this part of the product, unless the config or design system docs say. Done when you know the file, its briefs, which flows shipped, and where new components go.
 
 3. **Inventory.** Read the file and record, by node id:
    - every page, section and top-level frame, and the flow and state each belongs to
@@ -48,7 +48,7 @@ The file then lives on as the source of truth for this part of the product. Audi
 
 6. **Tidy.** Apply the approved Tidy entries. Archive instead of deleting.
 
-7. **Harvest.** Build each approved component on the Components page, nested components first. Then replace each occurrence in the shipped frames with an instance, and reattach the detached instances the plan marks. Screenshot each replaced frame against its before state: any visible difference is a bug to fix or a question for the user. Then put each approved pattern's reference example on the Patterns page, and align the screens the plan says to.
+7. **Harvest.** Build each approved component where new components go, nested components first. Then replace each occurrence in the shipped frames with an instance, and reattach the detached instances the plan marks. Screenshot each replaced frame against its before state: any visible difference is a bug to fix or a question for the user. Then put each approved pattern's reference example on the Patterns page, and align the screens the plan says to.
 
 8. **Read back** the file against the plan. Done when every approved entry is applied, or listed as not done with why.
 
