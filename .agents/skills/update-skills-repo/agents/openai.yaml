@@ -1,0 +1,3 @@
+interface:
+  display_name: "Update Skills Repo"
+  short_description: "Ship a change to this skills package"
