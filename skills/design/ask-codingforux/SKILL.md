@@ -57,7 +57,7 @@ Read [PHASE-BOUNDARIES.md](PHASE-BOUNDARIES.md) for the ordered tree and the rea
 
 Off the main flow.
 
-- **`/ux-review`**: review any Figma page or frames against a brief or ticket, on three axes in parallel (System, Brief, Completeness). Each finding is a hard violation or a judgement call. Reports in chat; it posts Figma comments only when you ask. Reach for it on its own whenever you want a second look at a design, yours or anyone's.
+- **`/ux-review`**: review any Figma page or frames against a brief or ticket, on four axes in parallel (System, Brief, Completeness, Experience). Each finding is a hard violation or a judgement call. Reports in chat; it posts Figma comments only when you ask. Reach for it on its own whenever you want a second look at a design, yours or anyone's.
 - **`/to-ux-questionnaire`** also works outside the main flow: whenever what's blocking you is in **someone else's** head, it writes them the questions to answer.
 
 ## Precondition

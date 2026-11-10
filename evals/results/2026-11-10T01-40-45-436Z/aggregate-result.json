@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "claudeVersion": "2.1.321",
+  "startedAt": "2026-11-10T01:40:45.436Z",
+  "durationSeconds": 8,
+  "costUsd": 0.043993899999999996,
+  "partial": false,
+  "suite": {
+    "root": "/home/claude/skills-for-product-designers",
+    "ablation": "none",
+    "caseFilter": "router-prd-first",
+    "threshold": 1,
+    "concurrency": 1,
+    "plugins": [
+      {
+        "name": "skills-for-product-designers",
+        "version": "0.7.1",
+        "path": "/home/claude/skills-for-product-designers"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "router-prd-first",
+      "dir": "evals/router-prd-first",
+      "source": "prose",
+      "promptMarkdown": "/ask-codingforux My product manager just sent me a PRD for a new team invites feature. I haven't done anything with it yet. Which skill do I run first?",
+      "runsPerCase": 3,
+      "timeoutSeconds": 300,
+      "maxTurns": 6,
+      "graders": [
+        {
+          "name": "first-step-is-grill-prd",
+          "type": "llm",
+          "weight": 1,
+          "graderMarkdown": "PASS if the reply tells the user that the first skill to run on the PRD is grill-prd (written as `grill-prd` or `/grill-prd`).\nFAIL if it names a different skill as the first step, lists several skills without saying which comes first, or never names grill-prd.",
+          "config": {
+            "criteria": "PASS if the reply tells the user that the first skill to run on the PRD is grill-prd (written as `grill-prd` or `/grill-prd`).\nFAIL if it names a different skill as the first step, lists several skills without saying which comes first, or never names grill-prd.",
+            "focus": "last_message"
+          }
+        },
+        {
+          "name": "names-grill-prd",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": "last_message",
+            "pattern": "grill-prd",
+            "flags": "",
+            "match": "contains"
+          }
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 1,
+            "costUsd": 0.043993899999999996,
+            "judgeCostUsd": 0.0001896,
+            "durationSeconds": 8,
+            "startedAt": "2026-11-10T01:40:45.459Z",
+            "error": null,
+            "tracePath": "/tmp/claude-eval-dvlABo/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "first-step-is-grill-prd",
+                "passed": true,
+                "weight": 1,
+                "explanation": "judge votes: PASS PASS PASS",
+                "withOnly": false,
+                "scored": true,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ],
+                "evidence": "Run **`/grill-prd`** first.\n\nPaste the PRD into it, or pass a file, doc link, or tracker issue. It will:\n\n- Interview you to sharpen your understanding of the team invites PRD.\n- Read only the personas the PRD affects.\n- Mark each PRD item **yours**, **not yours**, or **needs alignment**.\n- Park any question only your team can answer as a `needs-alignment` sub-issue.\n\n**What comes next**\n- **Anything parked?** Run `/to-ux-questionnaire`. It gathers the open questions into one message. You send it to your PM, since the agent never messages anyone. If the PM replies with a new PRD draft instead of answers, re-run `/grill-prd`.\n- **Nothing parked?** Go straight to `/to-ux-brief`.\n\nIf this is your first flow on this product, run `/setup-codingforux-skills` once beforehand. It checks that the Figma MCP can write and sets up the folders, tracker, labels, standards, and personas the other skills assume.\n\nTry to keep `/grill-prd`, the questionnaire, `/to-ux-brief`, and `/to-ux-tickets` in one unbroken context window, so each step builds on the same thinking."
+              },
+              {
+                "name": "names-grill-prd",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched grill-prd",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          }
+        ]
+      },
+      "aggregates": {
+        "score": 1,
+        "passRate": 1
+      }
+    }
+  ],
+  "aggregates": {
+    "casesTotal": 1,
+    "casesPassed": 1,
+    "overallScore": 1,
+    "overallPassRate": 1
+  }
+}

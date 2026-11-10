@@ -1,5 +1,9 @@
 # skills-for-product-designers
 
+## 0.7.2
+
+- ux-review has a fourth axis, **Experience**. A sub-agent walks each user story as its persona, from a screenshot of every frame, and reports where that person would lose their way: what they see first, whether the next step is obvious, how much effort the story takes, where they would hesitate, whether they can recover from a slip, and whether it holds up where they use it. It gives at most three findings per story, each with one change that would fix it, and one line on what works. Every finding is a judgement call for you to decide on, so implement-ux-brief fixes nothing from it automatically.
+
 ## 0.7.1
 
 - wrap-up-figma-file asks which model to use for each kind of subagent (inventory, tidy, build, pattern, check) before it starts, recommending a fast model for reading and checking and the most capable one for building components.
