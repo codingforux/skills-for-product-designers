@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 1,
+  "claudeVersion": "2.1.321",
+  "startedAt": "2026-11-10T01:42:41.321Z",
+  "durationSeconds": 58,
+  "costUsd": 0.2318805,
+  "partial": false,
+  "suite": {
+    "root": "/home/claude/skills-for-product-designers",
+    "ablation": "none",
+    "threshold": 1,
+    "concurrency": 1,
+    "plugins": [
+      {
+        "name": "skills-for-product-designers",
+        "version": "0.7.1",
+        "path": "/home/claude/skills-for-product-designers"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "brief-from-prd",
+      "dir": "evals/brief-from-prd",
+      "source": "mixed",
+      "promptMarkdown": "/to-ux-brief The UX folder is `docs/ux/`. Read `docs/ux/config.md`, `docs/ux/issue-tracker.md` and `docs/ux/labels.md` first: they are this product's setup. The brief is `team-invites`. I ran grill-prd on it already, and my product manager has answered the open question.",
+      "runsPerCase": 3,
+      "timeoutSeconds": 600,
+      "maxTurns": 25,
+      "graders": [
+        {
+          "name": "answer-folded-in",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "docs/ux/briefs/team-invites.md"
+            },
+            "pattern": "7 days",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "brief-written",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "docs/ux/briefs/team-invites.md"
+            },
+            "pattern": "## User Stories[\\s\\S]*## Requirements[\\s\\S]*## Out of Scope",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "glossary-words",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "docs/ux/briefs/team-invites.md"
+            },
+            "pattern": "(?<![\"“'`])\\borganizations?\\b",
+            "flags": "i",
+            "match": "not_contains"
+          }
+        },
+        {
+          "name": "out-of-scope-has-reasons",
+          "type": "llm",
+          "weight": 1,
+          "graderMarkdown": "PASS if the Out of Scope section lists single sign-on with its reason (the legal review isn't finished) and does not list the notification email plumbing, which is someone else's work that still ships.\nFAIL if single sign-on is missing or has no reason, or if the email plumbing owned by engineering appears under Out of Scope.",
+          "config": {
+            "criteria": "PASS if the Out of Scope section lists single sign-on with its reason (the legal review isn't finished) and does not list the notification email plumbing, which is someone else's work that still ships.\nFAIL if single sign-on is missing or has no reason, or if the email plumbing owned by engineering appears under Out of Scope.",
+            "focus": {
+              "source": "file",
+              "path": "docs/ux/briefs/team-invites.md"
+            }
+          }
+        },
+        {
+          "name": "requirements-numbered",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "docs/ux/briefs/team-invites.md"
+            },
+            "pattern": "\\bR1\\.[\\s\\S]*\\bN1\\.",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "stories-have-personas",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "docs/ux/briefs/team-invites.md"
+            },
+            "pattern": "1\\. As an? (workspace admin|field tech)",
+            "flags": "i",
+            "match": "contains"
+          }
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 13,
+            "costUsd": 0.0929873,
+            "judgeCostUsd": 0.0004590000000000001,
+            "durationSeconds": 26,
+            "startedAt": "2026-11-10T01:42:41.353Z",
+            "error": null,
+            "tracePath": "/tmp/claude-eval-JhJAd6/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "answer-folded-in",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched 7 days",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "brief-written",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched ## User Stories[\\s\\S]*## Requirements[\\s\\S]*## Out of Scope",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "glossary-words",
+                "passed": true,
+                "weight": 1,
+                "explanation": "pattern absent as expected",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "out-of-scope-has-reasons",
+                "passed": true,
+                "weight": 1,
+                "explanation": "judge votes: PASS PASS PASS",
+                "withOnly": false,
+                "scored": true,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ],
+                "evidence": "# Team invites\n\nStatus: ux-brief\n\nSource: briefs/team-invites-prd.md\n\n## Problem\n\nWorkspace admins who want to add someone to their workspace have to email support, and it takes two days. New hires can't work until it's done. Field techs, who work on site from a phone, wait on the office before they can join.\n\n## Goals and Success Metrics\n\n- Admins add people to their workspace without waiting on support. Signal to watch: how many people are added by invite instead of by emailing support.\n- New hires start work the same day. Signal to watch: time from invite sent to first sign-in, with 80% of new hires working in the workspace the same day.\n- Field techs join from their phone without calling the office. Signal to watch: the share of invites accepted on a phone.\n\n## Users\n\n- **Workspace admin**: runs a team's workspace and decides who is in it. Needs to get a new hire working on day one.\n- **Field tech**: works on site from a phone, often with gloves on and poor signal. Needs to join the right workspace without calling the office.\n\n## User Stories\n\n1. As a workspace admin, I want to invite one person to my workspace by email, so that they can start work without me emailing support\n2. As a workspace admin, I want to invite several people at once, so that I can onboard a whole crew in one go\n3. As a field tech, I want an email that takes me into the workspace I was invited to, so that I can join on site without calling the office\n   - The email and the join flow work on a phone\n   - The email names the workspace and who invited me\n4. As a field tech, I want to join from my phone using the existing sign-in screens, so that joining feels familiar and I don't have to learn something new\n   - An expired invite says it has expired and tells me to ask the admin for a new one\n5. As a workspace admin, I want to see the invites that are still pending, so that I know who hasn't joined yet\n   - Each pending invite shows who it was sent to, when it was sent, and when it expires\n6. As a workspace admin, I want to cancel a pending invite, so that a wrong or unwanted invite can't be used\n7. As a workspace admin, I want to resend an invite, so that a person who missed or lost the email can still join\n   - Resending an expired invite starts a new 7 days\n8. As a workspace admin, I want to see which invites have expired, so that I can resend them\n\n## Requirements\n\n### Functional\n\nR1. An invite is sent by email to one person and is for one workspace\nR2. An invite expires 7 days after it is sent\nR3. Resending an invite, expired or not, starts a new 7 days\nR4. An expired invite stays in the pending list, marked as expired, until an admin resends or cancels it\nR5. A cancelled invite can no longer be used to join\nR6. The product says \"workspace\" and \"invite\" throughout, never \"organization\", \"org\", \"account\" or \"invitation link\"\n\n### Non-functional\n\nN1. The invited person's flow is designed phone first, since field techs join from a phone on site\nN2. The join flow reuses the existing sign-in screens\nN3. Touch targets are large and the screens are readable in bright light, for field techs\nN4. The join flow works on poor signal: it tells the person clearly when it can't reach the server and keeps what they typed\nN5. The email is sent through the existing notification service, so the design works within its template\n\n## Design Scope\n\nThe PRD items that are **yours** or **needs alignment**:\n\n- Inviting people to a workspace by email, one or several at a time\n- The email the invited person gets and joining from a phone\n- Seeing pending invites, and cancelling or resending one\n- Invite expiry (7 days, per the product manager)\n\nFor everything else the PRD covers and who owns it, see the [PRD snapshot](team-invites-prd.md).\n\n## Out of Scope\n\n- Single sign-on: legal review of the identity provider contract isn't finished\n- Inviting people to more than one workspace at once: ruled out by the PRD for this release\n\n## Open Questions\n\nNone.\n"
+              },
+              {
+                "name": "requirements-numbered",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched \\bR1\\.[\\s\\S]*\\bN1\\.",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "stories-have-personas",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched 1\\. As an? (workspace admin|field tech)",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          }
+        ]
+      },
+      "aggregates": {
+        "score": 1,
+        "passRate": 1
+      }
+    },
+    {
+      "name": "router-prd-first",
+      "dir": "evals/router-prd-first",
+      "source": "prose",
+      "promptMarkdown": "/ask-codingforux My product manager just sent me a PRD for a new team invites feature. I haven't done anything with it yet. Which skill do I run first?",
+      "runsPerCase": 3,
+      "timeoutSeconds": 300,
+      "maxTurns": 6,
+      "graders": [
+        {
+          "name": "first-step-is-grill-prd",
+          "type": "llm",
+          "weight": 1,
+          "graderMarkdown": "PASS if the reply tells the user that the first skill to run on the PRD is grill-prd (written as `grill-prd` or `/grill-prd`).\nFAIL if it names a different skill as the first step, lists several skills without saying which comes first, or never names grill-prd.",
+          "config": {
+            "criteria": "PASS if the reply tells the user that the first skill to run on the PRD is grill-prd (written as `grill-prd` or `/grill-prd`).\nFAIL if it names a different skill as the first step, lists several skills without saying which comes first, or never names grill-prd.",
+            "focus": "last_message"
+          }
+        },
+        {
+          "name": "names-grill-prd",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": "last_message",
+            "pattern": "grill-prd",
+            "flags": "",
+            "match": "contains"
+          }
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 1,
+            "costUsd": 0.0449924,
+            "judgeCostUsd": 0.00021569999999999988,
+            "durationSeconds": 8,
+            "startedAt": "2026-11-10T01:43:06.857Z",
+            "error": null,
+            "tracePath": "/tmp/claude-eval-9JOTpw/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "first-step-is-grill-prd",
+                "passed": true,
+                "weight": 1,
+                "explanation": "judge votes: PASS PASS PASS",
+                "withOnly": false,
+                "scored": true,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ],
+                "evidence": "Run **`/grill-prd`** first.\n\nGive it the PRD by pasting it in, or pass a file, a doc link or a tracker issue. It interviews you to sharpen your understanding of the team invites PRD. It also does three other things:\n\n- It reads only the personas the PRD affects.\n- It marks each PRD item **yours**, **not yours** or **needs alignment**.\n- It parks every question only your team can answer as a `needs-alignment` sub-issue of the brief.\n\n**What comes next**\n\n1. If anything got parked, run `/to-ux-questionnaire`. It gathers the open questions into one message for the PM. You send it, because the agent never messages anyone. If the PM replies with a new PRD draft instead of answers, re-run `/grill-prd`.\n2. If nothing got parked, run `/to-ux-brief`. It publishes the `ux-brief` issue.\n3. If the brief is bigger than one slice, run `/to-ux-tickets` and then `/implement-ux-brief`. Otherwise run `/implement-ux-brief` on the brief itself.\n\nKeep steps 1–4 in one unbroken context window where you can, so the grilling, brief and tickets all build on the same thinking.\n\nIf this is your first flow on this product, run **`/setup-codingforux-skills`** once before `/grill-prd`. It checks that the Figma MCP can write, then sets up the UX folder, issue tracker, labels, Figma files, standards, glossary and personas the other skills assume."
+              },
+              {
+                "name": "names-grill-prd",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched grill-prd",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          }
+        ]
+      },
+      "aggregates": {
+        "score": 1,
+        "passRate": 1
+      }
+    },
+    {
+      "name": "tickets-from-brief",
+      "dir": "evals/tickets-from-brief",
+      "source": "mixed",
+      "promptMarkdown": "/to-ux-tickets docs/ux/briefs/team-invites.md\n\nThe UX folder is `docs/ux/`. Read `docs/ux/config.md`, `docs/ux/issue-tracker.md` and `docs/ux/labels.md` first: they are this product's setup. I'm away from my desk, so I approve the breakdown you propose: publish the tickets without waiting for me. When you're done, list each ticket with its number, title, what it's blocked by and the user stories it covers.",
+      "runsPerCase": 3,
+      "timeoutSeconds": 600,
+      "maxTurns": 30,
+      "graders": [
+        {
+          "name": "first-ticket-unblocked",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": "trace",
+            "pattern": "tickets/01-[a-z0-9-]+\\.md[^\\n]*Blocked by:[^\\n]{0,12}None",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "one-file-per-ticket",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": "files",
+            "pattern": "briefs/team-invites/tickets/01-[a-z0-9-]+\\.md[\\s\\S]*briefs/team-invites/tickets/02-[a-z0-9-]+\\.md",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "vertical-slices",
+          "type": "llm",
+          "weight": 1,
+          "graderMarkdown": "The reply lists design tickets split from a brief about inviting people to a workspace.\n\nPASS if all of these hold:\n- Ticket 01 is the main path end to end: an admin invites one person and that person joins. Nothing blocks it.\n- Every later ticket is one more path a user can take (for example inviting several people, managing pending invites, an expired invite).\n- User stories 1 to 5 are each covered by some ticket.\n\nFAIL if any ticket is a horizontal layer across the brief (for example \"all error states\", \"wireframes\", \"visual polish\"), if ticket 01 is blocked by another ticket, or if a user story from 1 to 5 is covered by no ticket.",
+          "config": {
+            "criteria": "The reply lists design tickets split from a brief about inviting people to a workspace.\n\nPASS if all of these hold:\n- Ticket 01 is the main path end to end: an admin invites one person and that person joins. Nothing blocks it.\n- Every later ticket is one more path a user can take (for example inviting several people, managing pending invites, an expired invite).\n- User stories 1 to 5 are each covered by some ticket.\n\nFAIL if any ticket is a horizontal layer across the brief (for example \"all error states\", \"wireframes\", \"visual polish\"), if ticket 01 is blocked by another ticket, or if a user story from 1 to 5 is covered by no ticket.",
+            "focus": "last_message"
+          }
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 11,
+            "costUsd": 0.0939008,
+            "judgeCostUsd": 0.00043959999999999995,
+            "durationSeconds": 24,
+            "startedAt": "2026-11-10T01:43:15.004Z",
+            "error": null,
+            "tracePath": "/tmp/claude-eval-Z7NB3T/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "first-ticket-unblocked",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched tickets/01-[a-z0-9-]+\\.md[^\\n]*Blocked by:[^\\n]{0,12}None",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "one-file-per-ticket",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched briefs/team-invites/tickets/01-[a-z0-9-]+\\.md[\\s\\S]*briefs/team-invites/tickets/02-[a-z0-9-]+\\.md",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "vertical-slices",
+                "passed": true,
+                "weight": 1,
+                "explanation": "judge votes: PASS FAIL PASS",
+                "withOnly": false,
+                "scored": true,
+                "judgeVotes": [
+                  true,
+                  false,
+                  true
+                ],
+                "evidence": "I published four tickets as local markdown under `docs/ux/briefs/team-invites/tickets/`. I didn't change the brief. You said you approve the breakdown, so I didn't ask for review first.\n\n| # | Title | Blocked by | Who | Stories | Requirements |\n|---|---|---|---|---|---|\n| 01 | Invite one person by email and let them join (happy path) | None | agent | 1, 2 | R1, R2 |\n| 02 | Invite several people at once | 01 | agent | 3 | R2 |\n| 03 | See, cancel and resend pending invites | 01 | agent | 4 | R1, R2 |\n| 04 | Open an expired invite | 01 | agent | 5 | R1, R2 |\n\n- **Status:** all four are `ready-for-ux-agent`. None needs illustration, motion or brand work, so I marked none `ready-for-designer`.\n- **Order:** 01 is the happy path: the admin sends an invite and the field tech joins on their phone. Tickets 02, 03 and 04 depend only on 01 and can run in parallel once it's approved.\n- **Requirements:** R1 is on 01, 03 and 04, the tickets that deal with expiry or resending. R2 is on every ticket. N1 and N2 apply to all tickets and stay in the brief.\n- **Coverage:** every user story and requirement is covered.\n- **PRD snapshot:** `briefs/team-invites-prd.md` doesn't exist in the folder. The brief mentions it for PRD items beyond 1 to 4, and I didn't use it."
+              }
+            ]
+          }
+        ]
+      },
+      "aggregates": {
+        "score": 1,
+        "passRate": 1
+      }
+    }
+  ],
+  "aggregates": {
+    "casesTotal": 3,
+    "casesPassed": 3,
+    "overallScore": 1,
+    "overallPassRate": 1
+  }
+}

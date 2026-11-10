@@ -18,5 +18,5 @@ Skills for product design work, from a PM's PRD to reviewed designs in Figma.
 ## Model-invoked
 
 - [explore-variants](./explore-variants/SKILL.md): several radically different variants of a design in Figma, to pick a direction.
-- [ux-review](./ux-review/SKILL.md): review Figma frames on three axes: System, Brief and Completeness.
+- [ux-review](./ux-review/SKILL.md): review Figma frames on four axes: System, Brief, Completeness and Experience.
 - [figma-mcp](./figma-mcp/SKILL.md): the playbook for reading and writing Figma through the Figma MCP.

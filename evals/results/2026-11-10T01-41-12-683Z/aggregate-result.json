@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "claudeVersion": "2.1.321",
+  "startedAt": "2026-11-10T01:41:12.683Z",
+  "durationSeconds": 25,
+  "costUsd": 0.12166049999999999,
+  "partial": false,
+  "suite": {
+    "root": "/home/claude/skills-for-product-designers",
+    "ablation": "none",
+    "caseFilter": "brief-from-prd",
+    "threshold": 1,
+    "concurrency": 1,
+    "plugins": [
+      {
+        "name": "skills-for-product-designers",
+        "version": "0.7.1",
+        "path": "/home/claude/skills-for-product-designers"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "brief-from-prd",
+      "dir": "evals/brief-from-prd",
+      "source": "mixed",
+      "promptMarkdown": "/to-ux-brief The UX folder is `docs/ux/`. Read `docs/ux/config.md`, `docs/ux/issue-tracker.md` and `docs/ux/labels.md` first: they are this product's setup. The brief is `team-invites`. I ran grill-prd on it already, and my product manager has answered the open question.",
+      "runsPerCase": 3,
+      "timeoutSeconds": 600,
+      "maxTurns": 25,
+      "graders": [
+        {
+          "name": "answer-folded-in",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "docs/ux/briefs/team-invites.md"
+            },
+            "pattern": "7 days",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "brief-written",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "docs/ux/briefs/team-invites.md"
+            },
+            "pattern": "## User Stories[\\s\\S]*## Requirements[\\s\\S]*## Out of Scope",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "glossary-words",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "docs/ux/briefs/team-invites.md"
+            },
+            "pattern": "\\borganizations?\\b",
+            "flags": "i",
+            "match": "not_contains"
+          }
+        },
+        {
+          "name": "out-of-scope-has-reasons",
+          "type": "llm",
+          "weight": 1,
+          "graderMarkdown": "PASS if the Out of Scope section lists single sign-on with its reason (the legal review isn't finished) and does not list the notification email plumbing, which is someone else's work that still ships.\nFAIL if single sign-on is missing or has no reason, or if the email plumbing owned by engineering appears under Out of Scope.",
+          "config": {
+            "criteria": "PASS if the Out of Scope section lists single sign-on with its reason (the legal review isn't finished) and does not list the notification email plumbing, which is someone else's work that still ships.\nFAIL if single sign-on is missing or has no reason, or if the email plumbing owned by engineering appears under Out of Scope.",
+            "focus": {
+              "source": "file",
+              "path": "docs/ux/briefs/team-invites.md"
+            }
+          }
+        },
+        {
+          "name": "requirements-numbered",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "docs/ux/briefs/team-invites.md"
+            },
+            "pattern": "\\bR1\\.[\\s\\S]*\\bN1\\.",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "stories-have-personas",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "docs/ux/briefs/team-invites.md"
+            },
+            "pattern": "1\\. As an? (workspace admin|field tech)",
+            "flags": "i",
+            "match": "contains"
+          }
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 0.8333333333333334,
+            "passed": false,
+            "turns": 13,
+            "costUsd": 0.12166049999999999,
+            "judgeCostUsd": 0.0004215,
+            "durationSeconds": 25,
+            "startedAt": "2026-11-10T01:41:12.715Z",
+            "error": null,
+            "tracePath": "/tmp/claude-eval-pllgrO/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "answer-folded-in",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched 7 days",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "brief-written",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched ## User Stories[\\s\\S]*## Requirements[\\s\\S]*## Out of Scope",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "glossary-words",
+                "passed": false,
+                "weight": 1,
+                "explanation": "pattern found (expected absent)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "out-of-scope-has-reasons",
+                "passed": true,
+                "weight": 1,
+                "explanation": "judge votes: PASS PASS PASS",
+                "withOnly": false,
+                "scored": true,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ],
+                "evidence": "# Team invites\n\nStatus: ux-brief\n\nSource: briefs/team-invites-prd.md\n\n## Problem\n\nWorkspace admins can't add people to their workspace themselves. They email support, it takes two days, and new hires can't work until it's done. Field techs can't join the right workspace without calling the office.\n\n## Goals and Success Metrics\n\n- **Admins add people without support.** Signal: no support requests to add people to a workspace.\n- **New hires work on the day they're invited.** Signal: 80% of invited people sign in for the first time the same day, measured by time from invite sent to first sign-in.\n- **Field techs join on their own, on site.** Signal: invited people finish joining from a phone without contacting the office.\n\n## Users\n\n- **Workspace admin**: gets a new hire working on day one.\n- **Field tech**: joins the right workspace without calling the office.\n\n## User Stories\n\n1. As a workspace admin, I want to invite one person to my workspace by email, so that they can start work without waiting on support\n2. As a workspace admin, I want to invite several people in one go, so that I can bring on a whole crew quickly\n3. As a field tech, I want to join the workspace from the invite email on my phone, so that I can get started on site without calling the office\n   - Every step works on a phone\n   - Touch targets are large and the screens are readable in bright light\n   - Uses the existing sign-in screens\n4. As a workspace admin, I want to see the pending invites for my workspace, so that I know who hasn't joined yet\n5. As a workspace admin, I want to cancel a pending invite, so that a wrong or unwanted invite can't be used\n6. As a workspace admin, I want to resend an invite, so that someone who missed or lost the email can still join\n7. As a workspace admin, I want to resend an expired invite, so that the person gets a fresh 7 days to join\n8. As a field tech, I want to be told when my invite has expired, so that I know to ask my admin for a new one instead of being stuck\n   - The message says the invite expired and that the workspace admin can resend it\n\n## Requirements\n\n### Functional\n\nR1. An invite expires 7 days after it is sent\nR2. Resending an invite, whether pending or expired, starts a new 7 days\nR3. The word \"Invite\" is used for the request to join, never \"Invitation link\"\nR4. The word \"Workspace\" is used throughout, never \"Organization\", \"org\" or \"account\"\n\n### Non-functional\n\nN1. Phones come first for the invited person's whole path, from email to first sign-in\nN2. The invited person's path reuses the existing sign-in screens\nN3. Touch targets are large and screens are readable in bright light, for field techs working on site with gloves and poor signal\nN4. Workspace admin accessibility needs are unknown and need confirming in the persona file\n\n## Design Scope\n\nFrom the PRD snapshot (`briefs/team-invites-prd.md`), the items that are yours or needed alignment:\n\n- Inviting people to the workspace by email, one or several at a time\n- The invited person's email and joining from a phone\n- Pending invites: seeing them, cancelling and resending\n- Invite expiry: 7 days, resend after expiry (aligned in question 01)\n\nEverything else the PRD covers, including sending the email through the existing notification service, is owned by engineering. See the PRD snapshot.\n\n## Out of Scope\n\n- Single sign-on: legal review of the identity provider contract isn't finished\n- Inviting people to more than one workspace at once: ruled out by the PRD for this release\n\n## Open Questions\n\nNone.\n"
+              },
+              {
+                "name": "requirements-numbered",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched \\bR1\\.[\\s\\S]*\\bN1\\.",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "stories-have-personas",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched 1\\. As an? (workspace admin|field tech)",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          }
+        ]
+      },
+      "aggregates": {
+        "score": 0.8333333333333334,
+        "passRate": 0
+      }
+    }
+  ],
+  "aggregates": {
+    "casesTotal": 1,
+    "casesPassed": 0,
+    "overallScore": 0.8333333333333334,
+    "overallPassRate": 0
+  }
+}
