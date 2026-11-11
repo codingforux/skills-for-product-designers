@@ -1,5 +1,10 @@
 # skills-for-product-designers
 
+## 0.7.2
+
+- figma-mcp no longer repeats what Figma's own skills now cover. Reading by node, batching writes and reading back after the last write are gone: Figma's `figma-use` skill handles them, and its rule (return what changed from the write itself) replaces the read-back, which cost an extra call. What stays is what Figma leaves to your team: account, call budget, scope, and never publishing the library.
+- The budget step points to Figma's rate limits page for your seat's numbers and the tools Figma exempts, and is skipped when the job runs through a desktop bridge plugin, which is outside the limit.
+
 ## 0.7.1
 
 - wrap-up-figma-file asks which model to use for each kind of subagent (inventory, tidy, build, pattern, check) before it starts, recommending a fast model for reading and checking and the most capable one for building components.
