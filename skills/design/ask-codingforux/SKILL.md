@@ -40,7 +40,7 @@ If a session runs long before `/to-ux-tickets`, don't push on degraded; compact 
 
 One model-invoked reference runs *beneath* the other skills whenever the agent reads or writes Figma. Reach for it directly when a **Figma MCP call** is the problem, or let the skills above pull it in. Token rules come from your design system docs and `FIGMA_STANDARDS.md`, not a skill.
 
-- **`/figma-mcp`**: the playbook for reading and changing Figma files safely through the Figma MCP: account, call budget, reading by node, batching, never publishing the library. It also loads your team's Figma MCP findings.
+- **`/figma-mcp`**: the playbook for reading and changing Figma files safely through the Figma MCP: account, call budget, scope, never publishing the library. How to call each tool stays with Figma's own skills. It also loads your team's Figma MCP findings.
 
 ## Phase boundaries
 
