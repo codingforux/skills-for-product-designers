@@ -3,3 +3,6 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+
+# Eval run output
+evals/results/
