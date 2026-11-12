@@ -1,5 +1,5 @@
 interface:
   display_name: "Implement UX Brief"
-  short_description: "Design a brief in Figma with parallel subagents"
+  short_description: "Design a brief in Figma pass by pass with parallel subagents"
 policy:
   allow_implicit_invocation: false

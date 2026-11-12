@@ -1,5 +1,10 @@
 # skills-for-product-designers
 
+## 0.7.3
+
+- to-ux-tickets groups the tickets into **passes**, each ending with your review, and recommends where the reviews go ("review after 2 and 8"), for example after the happy path or after a ticket that sets a new component or layout later tickets copy. You approve the checkpoints with the rest of the breakdown. Each ticket gets a Pass section, and only pass 1's tickets are labelled `ready-for-ux-agent`; later passes wait without a ready label.
+- implement-ux-brief works one pass at a time. Each ticket moves to `ready-for-designer-review` as soon as its UX agent finishes, and at the end of the pass it runs ux-review on that pass, fixes the hard violations and stops for you. Close the tickets you approve, then say go or run `/implement-ux-brief` again: it labels the next pass and carries on. Tickets published before passes run as two: the happy path alone, then the rest.
+
 ## 0.7.2
 
 - figma-mcp no longer repeats what Figma's own skills now cover. Reading by node, batching writes and reading back after the last write are gone: Figma's `figma-use` skill handles them, and its rule (return what changed from the write itself) replaces the read-back, which cost an extra call. What stays is what Figma leaves to your team: account, call budget, scope, and never publishing the library.
