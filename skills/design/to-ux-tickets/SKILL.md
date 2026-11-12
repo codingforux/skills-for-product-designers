@@ -1,6 +1,6 @@
 ---
 name: to-ux-tickets
-description: Break a UX brief or the current conversation into a set of thin vertical slices, each one you can design, review and hand off on its own, published as sub-issues of the brief with their blocking edges.
+description: Break a UX brief or the current conversation into a set of thin vertical slices, each one you can design, review and hand off on its own, grouped into passes with a designer review after each, and published as sub-issues of the brief with their blocking edges.
 disable-model-invocation: true
 ---
 
@@ -38,6 +38,14 @@ Give each ticket its **blocking edges**: the other tickets that must complete be
 
 Mark each ticket **agent** or **human**. A ticket is human when it needs work the agent can't do through the Figma MCP, or taste the brief can't spell out: new illustration or iconography, motion, brand exploration. Most tickets are agent.
 
+Group the tickets into **passes**: the tickets UX agents design in one go before they stop for the user's review. Number the tickets in the order they'll be designed, so each pass is a run of numbers ending at a **checkpoint**: "review after 2 and 8" makes three passes, 1–2, 3–8 and 9 to the end. Recommend a checkpoint:
+
+- after the happy path, unless the tickets beside it in pass 1 don't build on it
+- after a ticket that sets a direction later tickets copy, such as a new component, layout or pattern
+- before explorations, so they start from approved frames
+
+Every ticket's blockers sit in its own pass or an earlier one.
+
 ### 3. Quiz the user
 
 Present the proposed breakdown as a numbered list. For each ticket, show:
@@ -47,9 +55,12 @@ Present the proposed breakdown as a numbered list. For each ticket, show:
 - **Who**: agent or human
 - **What it delivers**: what the user can do once this ticket is designed, and the user story and requirement numbers it covers
 
+Below the list, give the recommended checkpoints in one line ("Review after: 2, 8"), with the reason for each.
+
 Ask the user:
 
 - Is the happy path the right main path?
+- Are the checkpoints in the right places: does each review come before the tickets that build on its direction?
 - Does the granularity feel right? (too coarse / too fine)
 - Are the blocking edges correct: does each ticket only depend on tickets that genuinely gate it?
 - Should any tickets be merged or split further?
@@ -62,7 +73,9 @@ Iterate until the user approves the breakdown.
 Publish the approved tickets. **How** depends on the tracker `/setup-codingforux-skills` configured; the tickets are the same either way, only the shape of the blocking edges changes:
 
 - **Local markdown** → write one file per ticket under `briefs/<brief-slug>/tickets/<NN>-<slug>.md` in the UX folder, numbered from `01` in dependency order (blockers first). Each file's "Blocked by" lists the numbers/titles it depends on. Use the per-ticket file template below: one ticket per file, never a single combined file.
-- **A real issue tracker (GitHub, GitLab, …)** → publish one issue per ticket as a sub-issue of the brief, in dependency order (blockers first) so each ticket's blocking edges can reference real identifiers. Use the platform's native blocking relationship where it has one; otherwise set each ticket's "Blocked by" to the blocking issues. Apply the `ready-for-ux-agent` label, or `ready-for-designer` to tickets marked human.
+- **A real issue tracker (GitHub, GitLab, …)** → publish one issue per ticket as a sub-issue of the brief, in dependency order (blockers first) so each ticket's blocking edges can reference real identifiers. Use the platform's native blocking relationship where it has one; otherwise set each ticket's "Blocked by" to the blocking issues.
+
+Label pass 1's tickets `ready-for-ux-agent`, or `ready-for-designer` for tickets marked human. Later passes carry no ready label (on local markdown, `Status: waiting`): implement-ux-brief labels each pass when the user opens it.
 
 Each ticket's checklist is the user stories it covers, each with its acceptance criteria, and the functional requirements it covers, copied word for word from the brief with their numbers.
 
@@ -80,7 +93,9 @@ Do NOT close or modify the brief.
 
 **Blocked by:** the numbers/titles of the tickets that gate this one, or "None (can start immediately)".
 
-**Status:** ready-for-ux-agent or ready-for-designer
+**Pass:** 2 of 3 · agent (or human)
+
+**Status:** ready-for-ux-agent or ready-for-designer in pass 1; waiting in later passes
 
 - [ ] 3. As a <persona>, I want <thing>, so that <benefit>
   - <acceptance criterion>
@@ -112,6 +127,10 @@ What the user can do once this ticket is designed, from their perspective, not a
 ## Blocked by
 
 - A reference to each blocking ticket, or "None (can start immediately)".
+
+## Pass
+
+2 of 3 · agent (or human)
 
 </issue-template>
 

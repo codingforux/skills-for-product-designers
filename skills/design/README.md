@@ -8,8 +8,8 @@ Skills for product design work, from a PM's PRD to reviewed designs in Figma.
 - [grill-prd](./grill-prd/SKILL.md): interview you about a PM's PRD, sorting what's yours from what only your team can answer.
 - [to-ux-questionnaire](./to-ux-questionnaire/SKILL.md): gather the open questions into one message for your team, then record the answers.
 - [to-ux-brief](./to-ux-brief/SKILL.md): turn the conversation into a UX brief on the tracker. Run it again with the brief's link to update it when the scope changes.
-- [to-ux-tickets](./to-ux-tickets/SKILL.md): split a brief into thin tickets, each one you can design, review and hand off on its own.
-- [implement-ux-brief](./implement-ux-brief/SKILL.md): design the whole brief in Figma with parallel subagents, one per ticket, then review it and fix the hard violations.
+- [to-ux-tickets](./to-ux-tickets/SKILL.md): split a brief into thin tickets, each one you can design, review and hand off on its own, grouped into passes with your review after each.
+- [implement-ux-brief](./implement-ux-brief/SKILL.md): design the brief in Figma pass by pass with parallel subagents, one per ticket, reviewing each pass and fixing the hard violations before stopping for yours.
 - [handoff-to-matt-pocock-skills](./handoff-to-matt-pocock-skills/SKILL.md): optional. Hand an approved brief and its Figma frames to Matt Pocock's `/to-spec`, for teams that build with his engineering skills.
 - [wrap-up-figma-file](./wrap-up-figma-file/SKILL.md): after a project ships, tidy its Figma file and harvest the components and patterns it grew, so you can keep building on them.
 - [agent-retro](./agent-retro/SKILL.md): after a session, suggest improvements to the standards, design system docs, glossary or Figma MCP findings, and write the ones you approve.
