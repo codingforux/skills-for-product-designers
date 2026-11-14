@@ -24,3 +24,4 @@ Read the file at the referenced path. The user will normally pass the path or th
 - **Parked question**: `Status: needs-alignment`, the question as the title. When your team answers, append it under an `## Answer` heading and set `Status: closed`. Open means waiting on the PM; closed means settled.
 - **Ticket**: `Status: waiting` until its pass opens, then `ready-for-ux-agent` (or `ready-for-designer`); `ready-for-designer-review` once designed and waiting for the user.
 - **Blocking**: a `Blocked by: NN, NN` line near the top. A ticket is unblocked when every ticket it lists is `closed`.
+- **Discovery map**: a file like a brief, `briefs/<map-slug>.md` with `Status: ux-discovery`. Its tickets and questions use the same subfolders as a brief's. Claim a ticket with a `Claimed:` line near the top, and record its finding under a `## Finding` heading.

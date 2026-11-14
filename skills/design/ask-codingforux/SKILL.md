@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 You don't remember every skill, so ask.
 
-A **flow** is a path through the skills. Most paths run along one **main flow**: a PM's PRD in, a handed-off design out. Everything else is standalone, or a discipline that runs underneath.
+A **flow** is a path through the skills. Most paths run along one **main flow**: a PM's PRD in, a handed-off design out. The **discovery flow** starts from your own question instead, and can join the main flow at the brief. Everything else is standalone, or a discipline that runs underneath.
 
 ## The main flow: PRD → reviewed designs
 
@@ -35,6 +35,14 @@ The route most work travels. A PM hands you a PRD and you design it.
 Keep steps 1–4 in **one unbroken context window** where you can, so the grilling, brief and tickets all build on the same thinking. The same goes for `/handoff-to-matt-pocock-skills` and `/to-spec`: run them back to back, since `/to-spec` writes from the conversation. Your team's reply often takes days, and that's fine: the PRD snapshot, the brief and its `needs-alignment` sub-issues carry what was settled, so a new session picks up from them. `/implement-ux-brief` starts fresh, working from the brief and its tickets.
 
 If a session runs long before `/to-ux-tickets`, don't push on degraded; compact at the nearest phase boundary and carry on (see Phase boundaries).
+
+## The discovery flow: your own question → a readout
+
+When nobody handed you a PRD: a hunch to check, coworkers or customers to interview, competitors or Mobbin to scan.
+
+1. **`/discovery`** with the idea **charts** it. It names the **destination** with you (a brief you own, a pitch, doc updates or a decision), then creates a **map** on the tracker labelled `ux-discovery`, whose child tickets are questions. Research and pattern scans run at once in subagents.
+2. **`/discovery`** with the map **works** the next ticket, one per session. An interview takes two sessions: a discussion guide, then the synthesis once you bring your notes. Questions someone else can answer in writing are parked as `needs-alignment` children of the map, for **`/to-ux-questionnaire`**.
+3. **`/discovery`** with a map that has no open tickets **wraps up**: a readout written for the people who will act on it, saved to the research folder. When the destination is a brief, run **`/to-ux-brief`** in the same session, and the main flow carries on at step 4.
 
 ## Underneath
 

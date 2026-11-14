@@ -1,6 +1,6 @@
 # Labels
 
-The UX skills speak in terms of five roles. This file maps those roles to the actual label strings used in this product's issue tracker.
+The UX skills speak in terms of six roles. This file maps those roles to the actual label strings used in this product's issue tracker.
 
 | Role                        | Label in our tracker        | Meaning                                                               |
 | --------------------------- | --------------------------- | --------------------------------------------------------------------- |
@@ -9,6 +9,7 @@ The UX skills speak in terms of five roles. This file maps those roles to the ac
 | `ready-for-ux-agent`        | `ready-for-ux-agent`        | A ticket in an open pass, ready for a UX agent                        |
 | `ready-for-designer`        | `ready-for-designer`        | A ticket only a person can design                                     |
 | `ready-for-designer-review` | `ready-for-designer-review` | A designed ticket waiting for the user's review                       |
+| `ux-discovery`              | `ux-discovery`              | A discovery map: the parent issue of its question tickets             |
 
 When a skill mentions a role (e.g. "label it `needs-alignment`"), use the corresponding label string from this table.
 
