@@ -1,10 +1,11 @@
 # Design
 
-Skills for product design work, from a PM's PRD to reviewed designs in Figma.
+Skills for product design work, from a PM's PRD or your own exploration to reviewed designs in Figma.
 
 ## User-invoked
 
 - [setup-codingforux-skills](./setup-codingforux-skills/SKILL.md): configure a product for these skills. Run once first.
+- [explore](./explore/SKILL.md): chart your own exploration as a map of question tickets (research, pattern scans, interviews, sketches), work them one at a time, and wrap up with a readout.
 - [grill-prd](./grill-prd/SKILL.md): interview you about a PM's PRD, sorting what's yours from what only your team can answer.
 - [to-ux-questionnaire](./to-ux-questionnaire/SKILL.md): gather the open questions into one message for your team, then record the answers.
 - [to-ux-brief](./to-ux-brief/SKILL.md): turn the conversation into a UX brief on the tracker. Run it again with the brief's link to update it when the scope changes.

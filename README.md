@@ -1,6 +1,6 @@
 # Skills For Product Designers
 
-Agent skills for product designers: take a PM's PRD and come out with reviewed designs in Figma.
+Agent skills for product designers: take a PM's PRD, or your own hunch, and come out with reviewed designs in Figma.
 
 This is a product-design fork of Matt Pocock's [Skills For Real Engineers](https://github.com/mattpocock/skills). It keeps his approach: small skills you can read in a few minutes, that compose into flows, and that work with any agent. Hack around with them and make them your own.
 
@@ -16,6 +16,10 @@ Most work runs along one main flow, from a PRD in to a handed-off design out:
 6. Optional: **`/handoff-to-matt-pocock-skills`** hands the approved design to Matt Pocock's engineering skills, so his `/to-spec` writes the code spec from your brief and frames. Skip it if your team doesn't use his skills.
 7. **`/wrap-up-figma-file`** tidies the project's Figma file once it ships, and harvests the components and patterns it grew so you can keep building on them.
 8. **`/agent-retro`** suggests fixes to your standards and docs after a session that went wrong, and writes only the ones you approve.
+
+### Your own explorations
+
+When nobody handed you a PRD (a hunch to check, people to interview, competitors or Mobbin to scan), start with **`/explore`**. It charts the question as a map of tickets on your tracker, runs the research it can on its own, works the rest with you one ticket at a time, and wraps up with a readout. Its exits lead back into the main flow at `/to-ux-brief`, or to a pitch for a PM, doc updates or a recorded decision.
 
 Not sure which skill fits? Run **`/ask-codingforux`**.
 
@@ -51,6 +55,7 @@ You run these yourself:
 | Skill | What it does |
 | --- | --- |
 | [setup-codingforux-skills](./skills/design/setup-codingforux-skills/SKILL.md) | Configure a product for these skills. Run once first. |
+| [explore](./skills/design/explore/SKILL.md) | Chart your own exploration as a map of question tickets (research, pattern scans, interviews, sketches), work them one at a time, and wrap up with a readout. |
 | [grill-prd](./skills/design/grill-prd/SKILL.md) | Interview you about a PM's PRD, sorting what's yours from what only your team can answer. |
 | [to-ux-questionnaire](./skills/design/to-ux-questionnaire/SKILL.md) | Gather the open questions into one message for your team, then record the answers. |
 | [to-ux-brief](./skills/design/to-ux-brief/SKILL.md) | Turn the conversation into a UX brief on the tracker, or update one when scope changes. |

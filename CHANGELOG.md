@@ -1,5 +1,12 @@
 # skills-for-product-designers
 
+## 0.8.0
+
+- New skill, `/explore`, for your own explorations, where nobody handed you a PRD: a hunch to check, coworkers or customers to interview, competitors or Mobbin to scan. Adapted from Matt Pocock's `wayfinder`. Run it with a loose idea and it names the **destination** with you (a brief you own, a pitch to a PM, doc updates, or a decision, where "not worth doing" counts), then charts a **map** on your tracker: a parent issue whose child tickets are questions, each typed as research, pattern scan, interview, task, sketch or grilling. Research and pattern-scan tickets run straight away in parallel subagents. Run it again with the map to work the next ticket; interviews take two sessions, a discussion guide first and the synthesis after you've talked. When no tickets are left it writes a **readout** with each finding's evidence and strength, then takes the exit: `/to-ux-brief`, a pitch issue, doc updates or a recorded decision.
+- Findings notes go in a research folder, one folder per map, on one branch with one pull request at wrap-up. People stay anonymous: participants are written as code and role, and transcripts, recordings and customer records never go in the repo or tracker.
+- New labels: `ux-exploration` for the map, and `explore:research`, `explore:pattern-scan`, `explore:interview`, `explore:task`, `explore:sketch`, `explore:grilling` for its tickets. Add them to your `labels.md` and your tracker, and add a `Research` line to your `config.md` saying where findings go (the templates show both), or re-run `/setup-codingforux-skills`.
+- to-ux-brief can write a brief from an exploration's readout, with the map as its source instead of a PRD. to-ux-questionnaire gathers an exploration map's `needs-alignment` questions as well as a brief's. ask-codingforux routes to `/explore` when the idea is your own.
+
 ## 0.7.3
 
 - to-ux-tickets groups the tickets into **passes**, each ending with your review, and recommends where the reviews go ("review after 2 and 8"), for example after the happy path or after a ticket that sets a new component or layout later tickets copy. You approve the checkpoints with the rest of the breakdown. Each ticket gets a Pass section, and only pass 1's tickets are labelled `ready-for-ux-agent`; later passes wait without a ready label.
