@@ -16,7 +16,7 @@ The UX folder config (issue tracker, paths) should have been provided to you. If
 
 3. **Write the questionnaire.** Draft one question per open sub-issue, following the Document structure below. Write it to `to-ux-questionnaire-<slug>.md` in the current directory (slug from the brief) and report the path. Done when the file exists and every open `needs-alignment` sub-issue is covered by a question.
 
-4. **Record the answers.** When the user brings the answers back, match each to its sub-issue. Close each answered sub-issue with the answer recorded, quoted as given, with who gave it. Leave a sub-issue open when the answer is partial or "I don't know", and tell the user which ones. Done when every answer is recorded. Then, if the answers change the PRD or a new draft arrives, offer to re-run `/grill-prd`; otherwise offer `/to-ux-brief`. For an exploration map, offer `/explore` on the map instead.
+4. **Record the answers.** When the user brings the answers back, match each to its sub-issue. Close each answered sub-issue with the answer recorded, quoted as given, with who gave it. Leave a sub-issue open when the answer is partial or "I don't know", and tell the user which ones. Done when every answer is recorded. Then, if the answers change the PRD or a new draft arrives, offer to re-run `/grill-prd`; otherwise offer `/to-ux-brief`. For an exploration map, offer `/discovery` on the map instead.
 
 ## Document structure
 

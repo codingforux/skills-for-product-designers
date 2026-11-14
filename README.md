@@ -17,9 +17,9 @@ Most work runs along one main flow, from a PRD in to a handed-off design out:
 7. **`/wrap-up-figma-file`** tidies the project's Figma file once it ships, and harvests the components and patterns it grew so you can keep building on them.
 8. **`/agent-retro`** suggests fixes to your standards and docs after a session that went wrong, and writes only the ones you approve.
 
-### Your own explorations
+### Your own questions
 
-When nobody handed you a PRD (a hunch to check, people to interview, competitors or Mobbin to scan), start with **`/explore`**. It charts the question as a map of tickets on your tracker, runs the research it can on its own, works the rest with you one ticket at a time, and wraps up with a readout. Its exits lead back into the main flow at `/to-ux-brief`, or to a pitch for a PM, doc updates or a recorded decision.
+When nobody handed you a PRD (a hunch to check, people to interview, competitors or Mobbin to scan), start with **`/discovery`**, adapted from Matt's `wayfinder`. It charts the question as a map of tickets on your tracker, runs the research it can on its own, works the rest with you one ticket at a time, and wraps up with a readout you can send. When the answer is a brief, it hands off to `/to-ux-brief` and the main flow carries on.
 
 Not sure which skill fits? Run **`/ask-codingforux`**.
 
@@ -55,7 +55,7 @@ You run these yourself:
 | Skill | What it does |
 | --- | --- |
 | [setup-codingforux-skills](./skills/design/setup-codingforux-skills/SKILL.md) | Configure a product for these skills. Run once first. |
-| [explore](./skills/design/explore/SKILL.md) | Chart your own exploration as a map of question tickets (research, pattern scans, interviews, sketches), work them one at a time, and wrap up with a readout. |
+| [discovery](./skills/design/discovery/SKILL.md) | Chart your own question as a map of tickets (research, pattern scans, interviews, sketches), work them one at a time, and wrap up with a readout you can send. |
 | [grill-prd](./skills/design/grill-prd/SKILL.md) | Interview you about a PM's PRD, sorting what's yours from what only your team can answer. |
 | [to-ux-questionnaire](./skills/design/to-ux-questionnaire/SKILL.md) | Gather the open questions into one message for your team, then record the answers. |
 | [to-ux-brief](./skills/design/to-ux-brief/SKILL.md) | Turn the conversation into a UX brief on the tracker, or update one when scope changes. |

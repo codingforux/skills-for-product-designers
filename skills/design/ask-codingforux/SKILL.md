@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 You don't remember every skill, so ask.
 
-A **flow** is a path through the skills. Most paths run along one **main flow**: a PM's PRD in, a handed-off design out. The **exploration flow** starts from your own question instead, and can join the main flow at the brief. Everything else is standalone, or a discipline that runs underneath.
+A **flow** is a path through the skills. Most paths run along one **main flow**: a PM's PRD in, a handed-off design out. The **discovery flow** starts from your own question instead, and can join the main flow at the brief. Everything else is standalone, or a discipline that runs underneath.
 
 ## The main flow: PRD → reviewed designs
 
@@ -36,15 +36,13 @@ Keep steps 1–4 in **one unbroken context window** where you can, so the grilli
 
 If a session runs long before `/to-ux-tickets`, don't push on degraded; compact at the nearest phase boundary and carry on (see Phase boundaries).
 
-## The exploration flow: your own question → findings
+## The discovery flow: your own question → a readout
 
 When nobody handed you a PRD: a hunch to check, coworkers or customers to interview, competitors or Mobbin to scan.
 
-1. **`/explore`** with the idea **charts** it. It names the **destination** with you (a brief you own, a pitch to a PM, doc updates, or a decision), then creates a **map** on the tracker labelled `ux-exploration`, whose child tickets are questions typed as research, pattern scan, interview, task, sketch or grilling. Research and pattern scans run at once in subagents and close themselves.
-2. **`/explore`** with the map **works** the next ticket, one per session, and redraws the map as answers clear the fog. An interview takes two sessions: a discussion guide first, then the synthesis once you bring your notes. Questions someone else can answer in writing are parked as `needs-alignment` children of the map, and **`/to-ux-questionnaire`** writes them up for you to send.
-3. **`/explore`** with a map that has no open tickets **wraps up**: a readout of the findings with their evidence and strength, then the exit. A brief you own goes to **`/to-ux-brief`** in the same session, and from there the main flow carries on at step 4.
-
-Findings notes live in the research folder, one folder per map, and people in them stay anonymous.
+1. **`/discovery`** with the idea **charts** it. It names the **destination** with you (a brief you own, a pitch, doc updates or a decision), then creates a **map** on the tracker labelled `ux-exploration`, whose child tickets are questions. Research and pattern scans run at once in subagents.
+2. **`/discovery`** with the map **works** the next ticket, one per session. An interview takes two sessions: a discussion guide, then the synthesis once you bring your notes. Questions someone else can answer in writing are parked as `needs-alignment` children of the map, for **`/to-ux-questionnaire`**.
+3. **`/discovery`** with a map that has no open tickets **wraps up**: a readout written for the people who will act on it, saved to the research folder. When the destination is a brief, run **`/to-ux-brief`** in the same session, and the main flow carries on at step 4.
 
 ## Underneath
 
