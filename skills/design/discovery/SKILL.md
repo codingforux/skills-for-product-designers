@@ -8,11 +8,11 @@ Discovery starts from the user's own question, with no PRD: a hunch to check, ho
 
 The UX folder config (issue tracker, labels, paths) should have been provided to you. If not, tell the user to run `/setup-codingforux-skills`.
 
-An exploration ends in **findings and decisions**. A sketch exists to provoke a reaction. When the pull is to design for real, the map has reached its edge: wrap up.
+Discovery ends in **findings and decisions**. A sketch exists to provoke a reaction. When the pull is to design for real, the map has reached its edge: wrap up.
 
 ## The map
 
-The map is one issue labelled `ux-exploration`, and its tickets are its children. In the tracker it works like a brief: use the **Brief operations** in `issue-tracker.md` for children, parked questions and blocking, with the map in the brief's place.
+The map is one issue labelled `ux-discovery`, and its tickets are its children. In the tracker it works like a brief: use the **Brief operations** in `issue-tracker.md` for children, parked questions and blocking, with the map in the brief's place.
 
 The map is an **index**: each finding lives in its ticket, and the map holds its one-line gist and link.
 

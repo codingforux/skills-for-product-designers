@@ -2,10 +2,10 @@
 
 ## 0.8.0
 
-- New skill, `/discovery`, for your own questions, where nobody handed you a PRD: a hunch to check, coworkers or customers to interview, competitors or Mobbin to scan. Adapted from Matt Pocock's `wayfinder`. It charts the question as a **map** on your tracker, whose child tickets are questions: research, pattern scan, interview, task, sketch or grilling. Research and pattern scans run on their own in subagents; the rest you work one per session. Wrap-up writes a **readout** for the people who will act on it, with each finding's evidence and strength, and hands off to `/to-ux-brief` when the answer is a brief.
+- New skill, `/discovery`, for your own questions, where nobody handed you a PRD: a hunch to check, coworkers or customers to interview, competitors or Mobbin to scan. Adapted from Matt Pocock's `wayfinder`. It charts the question as a **map** on your tracker, whose child tickets are questions: research, pattern scan, interview, task, sketch or grilling. Research and pattern scans run on their own in subagents; the rest you work one per session. Wrap-up writes a **readout** for the people who will act on it, with each finding's evidence and strength, and hands off to `/to-ux-brief` when the answer is a brief. Doc updates you put off, such as persona changes, are listed in the readout to apply later.
 - Each finding is its ticket's closing comment; only the readout is saved to the repo, in a `research/` folder. People stay anonymous: participants are a code and a role, and transcripts, recordings and customer records stay out of the tracker and the repo.
-- One new label, `ux-exploration`, for the map. Add it to your `labels.md` and your tracker, and add a `Research` line to your `config.md` (the templates show both), or re-run `/setup-codingforux-skills`.
-- to-ux-brief and to-ux-questionnaire accept an exploration map where they took a PRD or a brief, and ask-codingforux routes to `/discovery`.
+- One new label, `ux-discovery`, for the map. Add it to your `labels.md` and your tracker, and add a `Research` line to your `config.md` (the templates show both), or re-run `/setup-codingforux-skills`.
+- to-ux-brief and to-ux-questionnaire accept a discovery map where they took a PRD or a brief, and ask-codingforux routes to `/discovery`.
 
 ## 0.7.3
 

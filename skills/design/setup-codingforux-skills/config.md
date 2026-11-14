@@ -7,7 +7,7 @@ How the UX skills find this product's design files and Figma files.
 - **Product**: <name>
 - **UX folder**: `docs/ux/`
 - **Design system docs**: `<where the team documents its design system: a folder, a registry, a docs site or another repo; or "none">`
-- **Research**: `research/` in the UX folder. `/discovery` saves one readout per exploration here.
+- **Research**: `research/` in the UX folder. `/discovery` saves one readout per map here.
 
 ## Figma
 
@@ -25,6 +25,6 @@ How the UX skills find this product's design files and Figma files.
 - **`glossary.md`**: the product's own words. Use them in every brief, ticket, frame name and piece of copy.
 - **`personas/`**: one file per persona, plus `index.md` with one line each. Open these only when your skill says to, and only the personas the work affects.
 - **`briefs/`**: briefs, PRD snapshots, questions and tickets, when the issue tracker is local markdown.
-- **`research/`**: readouts from `/discovery`, one file per exploration.
+- **`research/`**: readouts from `/discovery`, one file per map.
 
 If any of these files don't exist, **proceed silently**. Don't flag their absence.

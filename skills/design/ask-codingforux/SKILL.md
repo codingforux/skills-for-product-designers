@@ -40,7 +40,7 @@ If a session runs long before `/to-ux-tickets`, don't push on degraded; compact 
 
 When nobody handed you a PRD: a hunch to check, coworkers or customers to interview, competitors or Mobbin to scan.
 
-1. **`/discovery`** with the idea **charts** it. It names the **destination** with you (a brief you own, a pitch, doc updates or a decision), then creates a **map** on the tracker labelled `ux-exploration`, whose child tickets are questions. Research and pattern scans run at once in subagents.
+1. **`/discovery`** with the idea **charts** it. It names the **destination** with you (a brief you own, a pitch, doc updates or a decision), then creates a **map** on the tracker labelled `ux-discovery`, whose child tickets are questions. Research and pattern scans run at once in subagents.
 2. **`/discovery`** with the map **works** the next ticket, one per session. An interview takes two sessions: a discussion guide, then the synthesis once you bring your notes. Questions someone else can answer in writing are parked as `needs-alignment` children of the map, for **`/to-ux-questionnaire`**.
 3. **`/discovery`** with a map that has no open tickets **wraps up**: a readout written for the people who will act on it, saved to the research folder. When the destination is a brief, run **`/to-ux-brief`** in the same session, and the main flow carries on at step 4.
 

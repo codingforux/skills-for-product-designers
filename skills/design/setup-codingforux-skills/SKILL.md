@@ -10,7 +10,7 @@ Scaffold the per-product configuration that the UX skills assume:
 
 - **UX folder**: where the config, standards, glossary and personas live (always `docs/ux/`)
 - **Issue tracker**: where briefs, parked questions and tickets live (GitHub by default; local markdown is also supported out of the box)
-- **Labels**: the strings used for the six roles `ux-brief`, `needs-alignment`, `ready-for-ux-agent`, `ready-for-designer`, `ready-for-designer-review`, `ux-exploration`
+- **Labels**: the strings used for the six roles `ux-brief`, `needs-alignment`, `ready-for-ux-agent`, `ready-for-designer`, `ready-for-designer-review`, `ux-discovery`
 - **Figma files**: the libraries, and where new design files go (a Figma project folder, or one long-lived product file)
 - **Standards, glossary and personas**: the project's Figma rules, its own words, and who uses it
 
@@ -73,7 +73,7 @@ When the UX folder isn't inside a clone of the tracker's repo, ask which repo (`
 > - `ready-for-ux-agent`: a ticket ready for a UX agent
 > - `ready-for-designer`: a ticket only a person can design
 > - `ready-for-designer-review`: a designed ticket waiting for your review
-> - `ux-exploration`: an exploration map, the parent of its question tickets
+> - `ux-discovery`: a discovery map, the parent of its question tickets
 >
 > Do you want to keep these default labels? (recommended: **yes**)
 

@@ -14,7 +14,7 @@ If the user passes a link to a brief whose body is already written, you are upda
 
 1. Gather what you need, if you haven't already: the PRD snapshot grill-prd saved at `briefs/<brief-slug>-prd.md` in the UX folder (or, when the brief comes out of a `/discovery` wrap-up, the map and its readout), the brief's `needs-alignment` sub-issues (open and closed, with their answers), the glossary, and `personas/index.md`. Open only the persona files this brief serves. Use the glossary's words throughout the brief.
 
-2. Write the brief using the template below, then publish it to the project issue tracker. grill-prd usually created the brief already: an issue labelled `ux-brief` whose body is only the PRD source link. Replace that body with the brief, keeping the source link at the top. If there is no brief yet, create the issue with the `ux-brief` label. For a brief from an exploration, its source link is the map. With local markdown, the brief is `briefs/<brief-slug>.md` in the UX folder.
+2. Write the brief using the template below, then publish it to the project issue tracker. grill-prd usually created the brief already: an issue labelled `ux-brief` whose body is only the PRD source link. Replace that body with the brief, keeping the source link at the top. If there is no brief yet, create the issue with the `ux-brief` label. For a brief from a discovery map, its source link is the map. With local markdown, the brief is `briefs/<brief-slug>.md` in the UX folder.
 
 <brief-template>
 
@@ -65,7 +65,7 @@ Numbered N1, N2 and on: the limits the design works within. Platform, technical 
 
 ## Design Scope
 
-The PRD items marked **yours** or **needs alignment** in grill-prd. For everything else the PRD covers and who owns it, link the PRD snapshot. For a brief from an exploration, the design work its readout recommends, linking the readout.
+The PRD items marked **yours** or **needs alignment** in grill-prd. For everything else the PRD covers and who owns it, link the PRD snapshot. For a brief from a discovery map, the design work its readout recommends, linking the readout.
 
 ## Out of Scope
 
